@@ -1,0 +1,41 @@
+# Site settings
+title: autohaus collision
+email: info@autohauscollision.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Professional auto body repair, collision restoration, and custom paint services. 
+  Quality craftsmanship and exceptional customer service for over 20 years.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Business info
+phone: "(845) 368-1770"
+address: "12 Wayne Avenue, Suffern, New York 10901"
+hours: "Monday - Friday: 8AM - 5PM, Saturday: 9AM - 4PM"
+
+# Navigation
+header_pages:
+  - services.md
+  - about.md
+  - contact.md
+
+# Optional settings
+show_excerpts: false

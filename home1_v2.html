@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autohaus Collision Center - Professional Auto Body Repair</title>
+    <meta name="description" content="Professional auto body repair services. Expert collision repair, paintwork, and restoration with quality craftsmanship you can trust.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Design System Styles -->
+    <style>
+        :root {
+            --brand-primary: #22c55e;
+            --brand-accent: #16a34a;
+            --brand-black: #000000;
+            --brand-white: #ffffff;
+        }
+        
+        .font-brand {
+            font-family: 'Arial Black', 'Helvetica Black', 'Arial Bold', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        
+        .font-system {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: #16a34a;
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            letter-spacing: 0;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background-color: #15803d;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #16a34a;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid #16a34a;
+            letter-spacing: 0;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #16a34a;
+            color: #ffffff;
+        }
+        
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .brand-header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 6rem 1rem;
+            position: relative;
+        }
+        
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            padding: 0 1rem;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+            
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+            
+            .font-brand {
+                letter-spacing: 0.1em;
+            }
+        }
+    </style>
+</head>
+<body class="font-system bg-gray-50">
+    
+    <!-- Top Bar -->
+    <div style="background-color: #16a34a; color: #ffffff; padding: 0.5rem 0; font-size: 0.875rem; text-align: center;">
+        <div class="container">
+            <span>🕒 Open Mon-Fri 8AM-6PM • 📞 Call for Free Estimate</span>
+        </div>
+    </div>
+    
+    <!-- Brand Header -->
+    <header class="brand-header">
+        <div class="container">
+            <div class="font-brand" style="font-size: 2.5rem; line-height: 0.9;">
+                <div>AUTOHAUS</div>
+                <div style="font-size: 0.75rem; color: #22c55e; margin-top: 0.25rem;">
+                    COLLISION CENTER INC.
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav style="background-color: #ffffff; border-bottom: 1px solid #e5e5e5; padding: 1rem 0; position: sticky; top: 0; z-index: 50;">
+        <div class="container">
+            <div class="flex justify-center space-x-8 text-sm font-medium">
+                <a href="#home" class="text-gray-700 hover:text-green-600 transition-colors">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-green-600 transition-colors">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-green-600 transition-colors">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 style="font-size: 3.5rem; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem;">
+                Professional Auto Body Repair
+            </h1>
+            <p style="font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; color: rgba(255, 255, 255, 0.9);">
+                Expert collision repair, precision paintwork, and complete restoration services. 
+                Quality craftsmanship you can trust when it matters most.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="btn-primary">Get Free Estimate</a>
+                <a href="tel:+1234567890" class="btn-secondary" style="color: #ffffff; border-color: #ffffff;">
+                    Call Now: (123) 456-7890
+                </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Insurance Approved</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Lifetime Warranty</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>25+ Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="section-padding" style="background-color: #fafafa;">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 style="font-size: 2.5rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 1rem; color: #171717;">
+                    Our Services
+                </h2>
+                <p style="font-size: 1.125rem; line-height: 1.6; color: #525252; max-width: 600px; margin: 0 auto;">
+                    Complete auto body repair services with precision and care
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 2rem 0;">
+                
+                <div class="service-card">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; line-height: 1.4; font-weight: 600; margin-bottom: 1rem;">Collision Repair</h3>
+                    <p style="color: #525252; line-height: 1.6;">Expert structural and cosmetic collision repair using state-of-the-art equipment and techniques.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; line-height: 1.4; font-weight: 600; margin-bottom: 1rem;">Paint & Refinishing</h3>
+                    <p style="color: #525252; line-height: 1.6;">Professional paint matching and refinishing services that restore your vehicle's original appearance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; line-height: 1.4; font-weight: 600; margin-bottom: 1rem;">Dent Repair</h3>
+                    <p style="color: #525252; line-height: 1.6;">Advanced paintless dent repair and traditional dent removal for all types of vehicle damage.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; line-height: 1.4; font-weight: 600; margin-bottom: 1rem;">Insurance Claims</h3>
+                    <p style="color: #525252; line-height: 1.6;">Complete assistance with insurance claims and direct billing to all major insurance companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section-padding" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 style="font-size: 2.5rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 1.5rem; color: #171717;">
+                        Quality Craftsmanship You Can Trust
+                    </h2>
+                    <p style="font-size: 1.125rem; line-height: 1.6; color: #525252; margin-bottom: 1.5rem;">
+                        For over 25 years, Autohaus Collision Center has been the trusted choice for auto body repair. 
+                        Our certified technicians combine traditional craftsmanship with modern technology to restore 
+                        your vehicle to its original condition.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span style="color: #171717;">Certified I-CAR technicians</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span style="color: #171717;">State-of-the-art equipment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span style="color: #171717;">Lifetime warranty on repairs</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span style="color: #171717;">Direct insurance billing</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Professional auto body repair shop" 
+                         class="rounded-lg shadow-lg w-full h-64 md:h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding" style="background-color: #000000; color: #ffffff;">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 style="font-size: 2.5rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 1rem;">
+                    Get Your Free Estimate Today
+                </h2>
+                <p style="font-size: 1.125rem; line-height: 1.6; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto;">
+                    Contact us for a professional assessment and detailed estimate for your auto body repair needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #22c55e;">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                <div>
+                                    <div style="font-weight: 600;">Phone</div>
+                                    <div style="color: rgba(255, 255, 255, 0.8);">(123) 456-7890</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <div>
+                                    <div style="font-weight: 600;">Address</div>
+                                    <div style="color: rgba(255, 255, 255, 0.8);">123 Main Street<br>Anytown, ST 12345</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <div>
+                                    <div style="font-weight: 600;">Hours</div>
+                                    <div style="color: rgba(255, 255, 255, 0.8);">Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6">
+                        <a href="tel:+1234567890" class="btn-primary block text-center mb-4">Call Now for Estimate</a>
+                        <a href="mailto:info@autohauscc.com" class="btn-secondary block text-center" style="border-color: #ffffff; color: #ffffff;">
+                            Email Us
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #22c55e;">Why Choose Autohaus?</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Expert Technicians</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.5;">Certified professionals with decades of experience in collision repair and restoration.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Quality Guarantee</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.5;">Lifetime warranty on all repairs with satisfaction guaranteed.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Insurance Partners</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.5;">Direct billing and partnerships with all major insurance companies.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="background-color: #171717; color: #ffffff; padding: 2rem 0; border-top: 1px solid #404040;">
+        <div class="container text-center">
+            <div class="font-brand mb-4" style="font-size: 1.5rem;">
+                <div>AUTOHAUS</div>
+                <div style="font-size: 0.75rem; color: #22c55e; margin-top: 0.25rem;">
+                    COLLISION CENTER INC.
+                </div>
+            </div>
+            <p style="color: #a3a3a3; margin-bottom: 1rem;">
+                Professional auto body repair services since 1998
+            </p>
+            <p style="color: #737373; font-size: 0.875rem;">
+                © 2024 Autohaus Collision Center Inc. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

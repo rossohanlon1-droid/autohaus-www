@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autohaus Collision Center Inc. - Professional Auto Body Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
+                        }
+                    },
+                    fontFamily: {
+                        'brand': ['Arial Black', 'Helvetica Black', 'Arial Bold', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+    <!-- Emergency Contact Bar -->
+    <div class="bg-red-600 text-white py-2 px-4 text-center">
+        <span class="text-sm font-medium">🚨 24/7 Emergency Service Available - Call (555) 123-4567</span>
+    </div>
+
+    <!-- Top Contact Bar -->
+    <div class="bg-primary-600 text-white py-2">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span>📞 (555) 123-4567</span>
+                <span>🕒 Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span>Free Estimates</span>
+                <span class="bg-white text-primary-600 px-2 py-1 rounded text-xs font-bold">CALL NOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Header -->
+    <header class="bg-black text-white py-4">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="font-brand text-4xl md:text-5xl font-black tracking-wider">
+                AUTOHAUS
+            </h1>
+            <p class="text-primary-400 text-sm tracking-widest mt-1 font-bold">
+                COLLISION CENTER INC.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-center space-x-8 py-4">
+                <a href="#home" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+                <a href="#services" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Services</a>
+                <a href="#about" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">About</a>
+                <a href="#gallery" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Gallery</a>
+                <a href="#contact" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-black text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Professional Auto Body<br>
+                <span class="text-primary-400">Repair & Restoration</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+                Over 25 years of trusted service. Insurance approved. Lifetime warranty on all repairs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                    Get Free Estimate
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    Call (555) 123-4567
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-neutral-800 mb-4">Our Expert Services</h2>
+                <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+                    Complete collision repair and automotive services with state-of-the-art equipment
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:transform hover:scale-105 border border-neutral-200">
+                    <div class="text-primary-600 text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-800">Collision Repair</h3>
+                    <p class="text-neutral-600">Professional frame straightening, panel replacement, and structural repairs</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:transform hover:scale-105 border border-neutral-200">
+                    <div class="text-primary-600 text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-800">Paint & Refinishing</h3>
+                    <p class="text-neutral-600">Expert color matching and premium automotive paint systems</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:transform hover:scale-105 border border-neutral-200">
+                    <div class="text-primary-600 text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-800">Insurance Claims</h3>
+                    <p class="text-neutral-600">Direct billing and comprehensive insurance claim assistance</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:transform hover:scale-105 border border-neutral-200">
+                    <div class="text-primary-600 text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-800">Emergency Service</h3>
+                    <p class="text-neutral-600">24/7 emergency response and towing coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Trust Section -->
+    <section id="about" class="py-16 bg-neutral-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-neutral-800 mb-6">Why Choose Autohaus?</h2>
+                    <p class="text-lg text-neutral-600 mb-6">
+                        With over 25 years in the auto body repair industry, we've built our reputation on 
+                        quality craftsmanship, honest service, and customer satisfaction.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-neutral-700 font-medium">Lifetime warranty on all repairs</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-neutral-700 font-medium">I-CAR Gold Class certified technicians</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-neutral-700 font-medium">Direct insurance billing</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-neutral-700 font-medium">State-of-the-art equipment & facilities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:text-right">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                         alt="Professional Auto Body Shop" 
+                         class="rounded-xl shadow-xl w-full max-w-md ml-auto">
+                    <div class="grid grid-cols-2 gap-4 mt-6 max-w-md ml-auto">
+                        <div class="text-center bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-primary-600">25+</div>
+                            <div class="text-sm text-neutral-600">Years Experience</div>
+                        </div>
+                        <div class="text-center bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-primary-600">10,000+</div>
+                            <div class="text-sm text-neutral-600">Vehicles Repaired</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-black text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Get Your Free Estimate Today</h2>
+                <p class="text-xl text-neutral-300">
+                    Professional repair service you can trust. Contact us now for a free, no-obligation estimate.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-primary-400">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-primary-400">📞</span>
+                            <div>
+                                <div class="font-medium">Phone</div>
+                                <div class="text-neutral-300">(555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-primary-400">📍</span>
+                            <div>
+                                <div class="font-medium">Address</div>
+                                <div class="text-neutral-300">123 Auto Repair Lane<br>Your City, ST 12345</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-primary-400">🕒</span>
+                            <div>
+                                <div class="font-medium">Hours</div>
+                                <div class="text-neutral-300">Mon-Fri: 7AM-6PM<br>Saturday: 8AM-4PM<br>Sunday: Emergency Only</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-4 text-primary-400">Why Choose Us?</h4>
+                        <ul class="space-y-2 text-neutral-300">
+                            <li>• Free damage assessments and estimates</li>
+                            <li>• Insurance claim specialists on staff</li>
+                            <li>• Rental car coordination available</li>
+                            <li>• Lifetime warranty on workmanship</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-neutral-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary-400">Request Free Estimate</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" 
+                                   class="bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
+                            <input type="tel" placeholder="Phone Number" 
+                                   class="bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
+                        </div>
+                        <input type="email" placeholder="Email Address" 
+                               class="w-full bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
+                        <textarea placeholder="Describe the damage..." rows="4"
+                                  class="w-full bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none"></textarea>
+                        <button type="submit" 
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-lg font-semibold transition-colors">
+                            Get Free Estimate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <div class="font-brand text-2xl font-black text-white mb-2">AUTOHAUS</div>
+                <div class="text-primary-400 text-sm tracking-widest mb-4">COLLISION CENTER INC.</div>
+                <p class="text-sm">Professional auto body repair and collision services since 1998</p>
+                <p class="text-xs mt-4">© 2024 Autohaus Collision Center Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

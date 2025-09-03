@@ -1,0 +1,254 @@
+---
+---
+
+@import "minima";
+
+// Auto Body Shop Custom Styling
+
+// Color scheme - professional blues and grays
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$light-gray: #f8f9fa;
+$dark-gray: #343a40;
+
+// Custom header styling
+.site-header {
+  background-color: $primary-color;
+  border-bottom: 3px solid $secondary-color;
+  
+  .site-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none;
+    }
+  }
+  
+  .site-nav {
+    .page-link {
+      color: white;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      
+      &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Homepage hero section
+.home-hero {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+}
+
+// Button styling
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: $accent-color;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+}
+
+// Service cards
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  
+  h3 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+}
+
+// Contact info styling
+.contact-info {
+  background-color: $light-gray;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  
+  h3 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin: 0.5rem 0;
+    
+    strong {
+      color: $dark-gray;
+    }
+  }
+}
+
+// Table styling
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: $primary-color;
+    color: white;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: $light-gray;
+  }
+}
+
+// Phone number styling
+a[href^="tel:"] {
+  color: $accent-color;
+  font-weight: 600;
+  text-decoration: none;
+  
+  &:hover {
+    color: darken($accent-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Footer styling
+.site-footer {
+  background-color: $primary-color;
+  color: white;
+  margin-top: 3rem;
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section {
+    h3.footer-heading {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+  
+  .footer-cta .btn {
+    background-color: $accent-color;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      color: white;
+    }
+  }
+  
+  a {
+    color: $secondary-color;
+    
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  // Phone number styling in footer
+  a[href^="tel:"] {
+    color: $secondary-color;
+    font-weight: 600;
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .site-header .site-title {
+    font-size: 1.2rem;
+  }
+}

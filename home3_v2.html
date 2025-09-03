@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autohaus Collision Center Inc. - Professional Auto Body Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#22c55e',
+                        'accent': '#16a34a',
+                        'surface-dark': '#000000'
+                    },
+                    fontFamily: {
+                        'brand': ['Arial Black', 'Helvetica Black', 'Arial Bold', 'sans-serif'],
+                        'system': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+                    },
+                    fontSize: {
+                        'brand-main': '2.5rem',
+                        'brand-tagline': '0.75rem'
+                    },
+                    letterSpacing: {
+                        'brand': '0.15em'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-system bg-gray-50">
+    <!-- Emergency Contact Banner -->
+    <div class="bg-accent text-white py-2 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <span class="font-medium">🚨 EMERGENCY AUTO REPAIR SERVICE</span> • 
+            <a href="tel:555-AUTO-911" class="font-bold hover:underline">(555) AUTO-911</a> • 
+            <span>24/7 Towing & Mobile Service Available</span>
+        </div>
+    </div>
+
+    <!-- Brand Header -->
+    <header class="bg-black text-white text-center py-4">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="font-brand font-black text-brand-main leading-none tracking-brand uppercase">
+                AUTOHAUS
+                <span class="block text-brand-green">COLLISION CENTER INC.</span>
+            </h1>
+            <p class="text-brand-tagline tracking-wide uppercase mt-2 opacity-80">
+                PROFESSIONAL AUTO BODY REPAIR & RESTORATION
+            </p>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-black">
+            <img src="https://images.unsplash.com/photo-1632823471565-1ecdf7d4ed5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                 alt="Professional auto body shop interior" 
+                 class="w-full h-full object-cover opacity-60">
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                RESTORING YOUR VEHICLE<br>
+                <span class="text-brand-green">TO PERFECTION</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
+                Over 20 years of expert collision repair, custom paint, and frame straightening. 
+                Your trusted local auto body specialists.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:555-123-4567" class="bg-brand-green text-black font-bold py-4 px-8 rounded-full text-lg hover:bg-green-400 transition-all duration-200 transform hover:-translate-y-1">
+                    📞 Call Now: (555) 123-4567
+                </a>
+                <a href="#estimate" class="bg-transparent border-2 border-white text-white font-semibold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-all duration-200">
+                    Get Free Estimate
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-4 mt-12 text-center">
+                <div class="bg-black bg-opacity-50 rounded-lg py-4 px-2">
+                    <div class="text-2xl font-bold text-brand-green">20+</div>
+                    <div class="text-sm opacity-80">Years Experience</div>
+                </div>
+                <div class="bg-black bg-opacity-50 rounded-lg py-4 px-2">
+                    <div class="text-2xl font-bold text-brand-green">1000+</div>
+                    <div class="text-sm opacity-80">Cars Restored</div>
+                </div>
+                <div class="bg-black bg-opacity-50 rounded-lg py-4 px-2">
+                    <div class="text-2xl font-bold text-brand-green">100%</div>
+                    <div class="text-sm opacity-80">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    SEE THE <span class="text-brand-green">TRANSFORMATION</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    From collision damage to showroom quality. Our expert craftsmen deliver exceptional results every time.
+                </p>
+            </div>
+
+            <!-- Before/After Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Before/After 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Severe Front End Collision</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-center text-red-600 font-semibold mb-2">BEFORE</p>
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Damaged car before repair" 
+                                     class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div>
+                                <p class="text-center text-brand-green font-semibold mb-2">AFTER</p>
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Repaired car after service" 
+                                     class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600">Complete frame straightening and paint restoration</p>
+                    </div>
+                </div>
+
+                <!-- Before/After 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Side Impact Damage</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-center text-red-600 font-semibold mb-2">BEFORE</p>
+                                <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Side damage before repair" 
+                                     class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div>
+                                <p class="text-center text-brand-green font-semibold mb-2">AFTER</p>
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Repaired side after service" 
+                                     class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600">Door replacement and precision paint matching</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-lg font-semibold text-brand-green mb-4">
+                    LIFETIME WARRANTY ON PAINT • 3-YEAR WARRANTY ON REPAIRS
+                </p>
+                <a href="#gallery" class="bg-brand-green text-black font-bold py-3 px-8 rounded-full hover:bg-green-400 transition-all duration-200">
+                    View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Automotive Services Section -->
+    <section class="py-16 bg-gradient-to-br from-black to-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                 alt="Auto repair tools background" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <div class="relative max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">
+                    COMPLETE AUTOMOTIVE <span class="text-brand-green">RESTORATION</span>
+                </h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    From minor scratches to major collision damage, our certified technicians use state-of-the-art equipment and premium materials.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 bg-opacity-50 rounded-2xl p-8 text-center border border-gray-700 hover:border-brand-green transition-all duration-300">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Collision Repair</h3>
+                    <ul class="text-sm space-y-2 opacity-90">
+                        <li>• Frame straightening</li>
+                        <li>• Structural welding</li>
+                        <li>• Panel replacement</li>
+                        <li>• Safety system restoration</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 bg-opacity-50 rounded-2xl p-8 text-center border border-gray-700 hover:border-brand-green transition-all duration-300">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Custom Paint</h3>
+                    <ul class="text-sm space-y-2 opacity-90">
+                        <li>• Perfect color matching</li>
+                        <li>• Custom finishes</li>
+                        <li>• Clear coat restoration</li>
+                        <li>• Paintless dent repair</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 bg-opacity-50 rounded-2xl p-8 text-center border border-gray-700 hover:border-brand-green transition-all duration-300">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Quick Service</h3>
+                    <ul class="text-sm space-y-2 opacity-90">
+                        <li>• Mobile repair service</li>
+                        <li>• Insurance claim handling</li>
+                        <li>• Rental car coordination</li>
+                        <li>• 24/7 towing service</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="mt-16">
+                <h3 class="text-3xl font-bold text-center mb-12">OUR PROVEN <span class="text-brand-green">REPAIR PROCESS</span></h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-brand-green text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
+                        <h4 class="font-bold mb-2">FREE ESTIMATE</h4>
+                        <p class="text-sm opacity-80">Detailed damage assessment and transparent pricing</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-green text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
+                        <h4 class="font-bold mb-2">INSURANCE HANDLING</h4>
+                        <p class="text-sm opacity-80">We work directly with your insurance company</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-green text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
+                        <h4 class="font-bold mb-2">EXPERT REPAIR</h4>
+                        <p class="text-sm opacity-80">Precision craftsmanship using premium materials</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-brand-green text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mx-auto mb-4">4</div>
+                        <h4 class="font-bold mb-2">QUALITY DELIVERY</h4>
+                        <p class="text-sm opacity-80">Final inspection and warranty protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        FIND US & <span class="text-brand-green">GET IN TOUCH</span>
+                    </h2>
+                    
+                    <!-- Emergency Contact -->
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r-lg">
+                        <h3 class="font-bold text-red-700 mb-2">🚨 EMERGENCY SERVICE</h3>
+                        <p class="text-red-600 mb-2">24/7 Accident Response & Towing</p>
+                        <a href="tel:555-AUTO-911" class="text-2xl font-bold text-red-700 hover:underline">
+                            (555) AUTO-911
+                        </a>
+                    </div>
+
+                    <!-- Regular Contact -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-brand-green rounded-full p-3">
+                                <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Main Phone</h4>
+                                <a href="tel:555-123-4567" class="text-xl font-bold text-brand-green hover:underline">
+                                    (555) 123-4567
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-brand-green rounded-full p-3">
+                                <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <a href="mailto:info@autohauscc.com" class="text-lg text-brand-green hover:underline">
+                                    info@autohauscc.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-brand-green rounded-full p-3">
+                                <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Address</h4>
+                                <p class="text-gray-600">
+                                    123 Industrial Drive<br>
+                                    Your City, ST 12345
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white rounded-2xl p-6 mt-8 shadow-lg">
+                        <h3 class="font-bold text-gray-900 mb-4">Business Hours</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday:</span>
+                                <span class="font-semibold">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday:</span>
+                                <span class="font-semibold">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday:</span>
+                                <span class="font-semibold text-red-600">Emergency Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map/Image -->
+                <div class="relative">
+                    <div class="bg-gray-300 rounded-2xl h-96 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541832676-9b763b75d1eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Autohaus Collision Center location" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Location Badge -->
+                    <div class="absolute top-4 left-4 bg-white rounded-lg p-4 shadow-lg">
+                        <h4 class="font-bold text-gray-900 mb-1">AUTOHAUS COLLISION</h4>
+                        <p class="text-sm text-gray-600">123 Industrial Drive</p>
+                        <p class="text-xs text-brand-green font-semibold">OPEN NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="estimate" class="py-16 bg-black text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                GET YOUR <span class="text-brand-green">FREE ESTIMATE</span> TODAY
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Don't let accident damage stress you out. Get back on the road with confidence.
+            </p>
+            
+            <!-- Two-column CTA -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-brand-green">CALL NOW</h3>
+                    <p class="mb-4 opacity-80">Speak with our experts immediately</p>
+                    <a href="tel:555-123-4567" class="bg-brand-green text-black font-bold py-4 px-8 rounded-full text-lg hover:bg-green-400 transition-all duration-200 transform hover:-translate-y-1 block">
+                        📞 (555) 123-4567
+                    </a>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-brand-green">ONLINE ESTIMATE</h3>
+                    <p class="mb-4 opacity-80">Upload photos for quick assessment</p>
+                    <a href="mailto:estimates@autohauscc.com" class="bg-transparent border-2 border-brand-green text-brand-green font-bold py-4 px-8 rounded-full text-lg hover:bg-brand-green hover:text-black transition-all duration-200 block">
+                        📧 Send Photos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-3 gap-4 mt-12 text-center opacity-80">
+                <div>
+                    <div class="text-brand-green font-bold">✓</div>
+                    <p class="text-xs">Licensed & Insured</p>
+                </div>
+                <div>
+                    <div class="text-brand-green font-bold">✓</div>
+                    <p class="text-xs">All Insurance Accepted</p>
+                </div>
+                <div>
+                    <div class="text-brand-green font-bold">✓</div>
+                    <p class="text-xs">Lifetime Warranty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-4">
+                <h3 class="font-brand font-black text-xl tracking-brand uppercase">
+                    AUTOHAUS <span class="text-brand-green">COLLISION CENTER INC.</span>
+                </h3>
+            </div>
+            <p class="text-sm opacity-80 mb-4">
+                Professional auto body repair, collision restoration, and custom paint services.<br>
+                Quality craftsmanship and exceptional customer service for over 20 years.
+            </p>
+            <div class="border-t border-gray-700 pt-4">
+                <p class="text-xs opacity-60">
+                    &copy; 2025 Autohaus Collision Center Inc. All rights reserved. | Licensed & Insured
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
