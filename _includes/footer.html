@@ -1,37 +1,20 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-    <div class="footer-content">
-      
-      <div class="footer-section">
-        <h3 class="footer-heading">{{ site.title | escape }}</h3>
-        <p>{{ site.description }}</p>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="footer-heading">Contact Info</h3>
-        <p><strong>📞 Phone:</strong> <a href="tel:{{ site.phone | remove: '(' | remove: ')' | remove: '-' | remove: ' ' }}">{{ site.phone }}</a></p>
-        <p><strong>📧 Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-        <p><strong>📍 Address:</strong><br>{{ site.address }}</p>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="footer-heading">Business Hours</h3>
-        <p>{{ site.hours }}</p>
-        
-        <div class="footer-cta" style="margin-top: 1rem;">
-          <a href="/contact/" class="btn">Get Free Estimate</a>
+<footer class="bg-neutral-900 text-neutral-300 py-8">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center">
+            <div class="font-brand text-2xl font-black text-white mb-2">AUTOHAUS</div>
+            <div class="text-primary-400 text-sm tracking-widest mb-4">COLLISION CENTER INC.</div>
+            
+            <!-- Footer Reviews Summary -->
+            <div class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex">
+                <div class="star-rating text-lg mr-3">★★★★★</div>
+                <div class="text-sm">
+                    <span class="text-white font-semibold">Trusted by 500+ customers</span>
+                    <span class="text-neutral-400 ml-2">• 4.9/5 rating</span>
+                </div>
+            </div>
+            
+            <p class="text-sm">Professional auto body repair and collision services since 1998</p>
+            <p class="text-xs mt-4">© 2024 Autohaus Collision Center Inc. All rights reserved.</p>
         </div>
-      </div>
-
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}. All rights reserved.</p>
-      <p>Professional auto body repair and custom paint services.</p>
-    </div>
-
-  </div>
-
 </footer>
