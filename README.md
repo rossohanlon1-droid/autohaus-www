@@ -6,44 +6,27 @@ A Jekyll-based website for an auto body shop, designed to be hosted on GitHub Pa
 
 ### Prerequisites
 
-**Option 1: Native Ruby Development**
-- Ruby 2.5.0 or higher
-- Bundler gem
-
-**Option 2: Docker (Recommended)**
 - Docker
 - Docker Compose
 
 ### Local Development
-
-#### With Docker (Recommended)
 
 1. Clone this repository
    ```bash
    git clone git@github.com:rossohanlon1-droid/autohaus-www.git
    cd autohaus-www
    ```
+
 2. Start the development server:
    ```bash
    docker-compose up
    ```
+
 3. Open your browser to `http://localhost:4000`
+
 4. The site will auto-reload when you make changes!
 
 To stop the server: `Ctrl+C` or `docker-compose down`
-
-#### With Native Ruby
-
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   bundle install
-   ```
-3. Serve the site locally:
-   ```bash
-   bundle exec jekyll serve
-   ```
-4. Open your browser to `http://localhost:4000`
 
 ## 📁 Project Structure
 
@@ -51,11 +34,11 @@ To stop the server: `Ctrl+C` or `docker-compose down`
 ├── _config.yml          # Site configuration
 ├── _includes/           # Reusable components
 ├── assets/              # Images, CSS, JS files
-├── home*.html           # Homepage design variations
-├── index.md             # Default homepage
-├── about.md             # About page
-├── services.md          # Services page
-├── contact.md           # Contact page
+├── home*.html           # Homepage design variations (home1-home9)
+├── index.html           # Main homepage (using home9 design)
+├── about.html           # About page
+├── location.html        # Location & hours page
+├── contact.html         # Contact page
 ├── Gemfile              # Ruby dependencies
 ├── Dockerfile           # Docker configuration
 ├── docker-compose.yml   # Docker Compose for development
@@ -85,15 +68,13 @@ Edit `_config.yml` to customize:
 
 ### Homepage Variations
 
-Choose from multiple homepage designs:
-- `home1.html` - Classic layout
-- `home2.html` - Modern design
-- `home3.html` - Service-focused
-- `home4.html` - Trust-building emphasis
-- `home5.html` - Minimalist approach
-- `home6.html` - Full-service showcase
+Multiple homepage designs are available for testing and comparison:
+- `home1.html` through `home6.html` - Original design variations
+- `home7.html` - Top banner Google reviews integration
+- `home8.html` - Hero section floating reviews design  
+- `home9.html` - Navigation-integrated reviews (currently active as `index.html`)
 
-Set your preferred homepage in `_config.yml` or by renaming the desired file to `index.html`.
+The site currently uses the `home9.html` design as the main homepage, featuring sophisticated Google reviews integration throughout the user journey.
 
 ### Adding Content
 
@@ -121,23 +102,23 @@ Your site will be available at: `https://rossohanlon1-droid.github.io/autohaus-w
 ## 🛠 Troubleshooting
 
 ### Common Issues
-1. **Build failures**: Check `_config.yml` syntax
-2. **Missing dependencies**: Run `bundle install`
-3. **Layout issues**: Verify front matter in posts/pages
-4. **404 errors**: Check permalink structure
+1. **Build failures**: Check `_config.yml` syntax and restart with `docker-compose up --build`
+2. **Container issues**: Run `docker-compose down && docker-compose up`
+3. **Port conflicts**: Ensure port 4000 is not in use by another service
+4. **Changes not reflecting**: Container restarts automatically, but force rebuild if needed
 
-### Local Development Commands
+### Docker Commands
 
-**Docker Commands:**
-- Stop and restart: `docker-compose restart`
-- Rebuild after Gemfile changes: `docker-compose up --build`
-- Clean everything: `docker-compose down && docker system prune`
+**Development:**
+- Start: `docker-compose up`
+- Stop: `docker-compose down` or `Ctrl+C`
+- Restart: `docker-compose restart`
+- Rebuild: `docker-compose up --build`
 - View logs: `docker-compose logs -f`
 
-**Native Ruby Commands:**
-- Clear Jekyll cache: `bundle exec jekyll clean`
-- Regenerate site: `bundle exec jekyll build --trace`
-- Watch for changes: `bundle exec jekyll serve --livereload`
+**Cleanup:**
+- Remove containers: `docker-compose down`
+- Clean everything: `docker-compose down && docker system prune`
 
 ## 📚 Resources
 
