@@ -1,6 +1,6 @@
-# GitHub Pages Website
+# Autohaus - Auto Body Shop Website
 
-A Jekyll-based website designed to be hosted on GitHub Pages.
+A Jekyll-based website for an auto body shop, designed to be hosted on GitHub Pages.
 
 ## 🚀 Quick Start
 
@@ -19,6 +19,10 @@ A Jekyll-based website designed to be hosted on GitHub Pages.
 #### With Docker (Recommended)
 
 1. Clone this repository
+   ```bash
+   git clone git@github.com:rossohanlon1-droid/autohaus-www.git
+   cd autohaus-www
+   ```
 2. Start the development server:
    ```bash
    docker-compose up
@@ -45,36 +49,53 @@ To stop the server: `Ctrl+C` or `docker-compose down`
 
 ```
 ├── _config.yml          # Site configuration
-├── _posts/              # Blog posts
-├── _layouts/            # Page layouts (if custom)
-├── _includes/           # Reusable components (if custom)
-├── _sass/               # Sass stylesheets (if custom)
+├── _includes/           # Reusable components
 ├── assets/              # Images, CSS, JS files
-├── index.md             # Homepage
+├── home*.html           # Homepage design variations
+├── index.md             # Default homepage
 ├── about.md             # About page
+├── services.md          # Services page
+├── contact.md           # Contact page
 ├── Gemfile              # Ruby dependencies
 ├── Dockerfile           # Docker configuration
 ├── docker-compose.yml   # Docker Compose for development
 └── .dockerignore        # Docker ignore file
 ```
 
+## ✨ Auto Body Shop Features
+
+This website is specifically designed for auto body shops and includes:
+
+- **Multiple homepage design variations** (home1.html through home6.html)
+- **Services showcase** optimized for auto repair businesses
+- **Trust-building elements** for customer confidence
+- **Mobile-first responsive design**
+- **Contact forms and location information**
+- **Professional styling with Tailwind CSS**
+
 ## 🎨 Customization
 
 ### Site Settings
 
 Edit `_config.yml` to customize:
-- Site title and description
-- Your contact information
-- Social media links
-- Build settings
+- Shop name and description
+- Contact information
+- Service hours
+- Location details
+
+### Homepage Variations
+
+Choose from multiple homepage designs:
+- `home1.html` - Classic layout
+- `home2.html` - Modern design
+- `home3.html` - Service-focused
+- `home4.html` - Trust-building emphasis
+- `home5.html` - Minimalist approach
+- `home6.html` - Full-service showcase
+
+Set your preferred homepage in `_config.yml` or by renaming the desired file to `index.html`.
 
 ### Adding Content
-
-#### Blog Posts
-Create new posts in `_posts/` directory with the filename format:
-```
-YYYY-MM-DD-title.md
-```
 
 #### Pages
 Create new `.md` files in the root directory with front matter:
@@ -86,94 +107,16 @@ permalink: /page-url/
 ---
 ```
 
-### Themes
-
-This site uses the Minima theme. To customize:
-1. Override theme files in your repository
-2. Modify `_sass/minima/` files for styling changes
-3. Add custom layouts in `_layouts/`
-
 ## 🚀 Deployment to GitHub Pages
 
-### Method 1: Automatic Deployment
+### Automatic Deployment
 1. Push to your GitHub repository
-2. Go to Settings > Pages
+2. Go to Settings > Pages  
 3. Select "Deploy from a branch"
 4. Choose "main" branch
 5. GitHub Pages will build and deploy automatically
 
-### Method 2: GitHub Actions (Recommended)
-1. Create `.github/workflows/pages.yml`:
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.0
-        bundler-cache: true
-    
-    - name: Build site
-      run: bundle exec jekyll build
-    
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
-```
-
-## 🔧 GitHub Pages Best Practices
-
-### SEO Optimization
-- Use descriptive page titles and meta descriptions
-- Include `jekyll-seo-tag` plugin (included with Minima)
-- Add structured data with JSON-LD
-- Optimize images with proper alt tags
-
-### Performance
-- Minimize CSS and JavaScript
-- Optimize images (use WebP when possible)
-- Enable compression in `_config.yml`
-- Use a CDN for external resources
-
-### Security
-- Never commit sensitive information
-- Use environment variables for API keys
-- Keep dependencies updated with `bundle update`
-
-### Accessibility
-- Use semantic HTML
-- Ensure proper heading hierarchy (h1 → h2 → h3)
-- Include alt text for images
-- Test with screen readers
-
-## 📝 Content Guidelines
-
-### Writing Posts
-- Use clear, descriptive titles
-- Include categories and tags
-- Add excerpts for better previews
-- Use proper front matter
-
-### Images
-- Store in `assets/images/`
-- Use descriptive filenames
-- Include alt text
-- Optimize file sizes
+Your site will be available at: `https://rossohanlon1-droid.github.io/autohaus-www`
 
 ## 🛠 Troubleshooting
 
@@ -183,7 +126,7 @@ jobs:
 3. **Layout issues**: Verify front matter in posts/pages
 4. **404 errors**: Check permalink structure
 
-### Local Development
+### Local Development Commands
 
 **Docker Commands:**
 - Stop and restart: `docker-compose restart`
@@ -200,8 +143,7 @@ jobs:
 
 - [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [Minima Theme](https://github.com/jekyll/minima)
-- [Jekyll Themes](https://jekyllthemes.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 ## 📄 License
 
