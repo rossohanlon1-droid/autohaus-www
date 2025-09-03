@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Autohaus Collision Center Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
+                        }
+                    },
+                    fontFamily: {
+                        'brand': ['Arial Black', 'Helvetica Black', 'Arial Bold', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+    <!-- Top Contact Bar -->
+    <div class="bg-primary-600 text-white py-2">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span>📞 (555) 123-4567</span>
+                <span>🕒 Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span>Free Estimates</span>
+                <span class="bg-white text-primary-600 px-2 py-1 rounded text-xs font-bold">CALL NOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Header -->
+    <header class="bg-black text-white py-4">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="font-brand text-4xl md:text-5xl font-black tracking-wider">
+                AUTOHAUS
+            </h1>
+            <p class="text-primary-400 text-sm tracking-widest mt-1 font-bold">
+                COLLISION CENTER INC.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation with Integrated Reviews Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Services</a>
+                    <a href="about.html" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">About</a>
+                    <a href="#gallery" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-primary-600 font-semibold">Contact</a>
+                </div>
+                
+                <!-- Integrated Reviews Trust Badge -->
+                <div class="hidden lg:flex items-center bg-primary-50 border border-primary-200 rounded-full px-4 py-2 mr-4">
+                    <div class="star-rating text-lg mr-2">★★★★★</div>
+                    <div class="text-sm">
+                        <div class="font-semibold text-primary-700">4.9/5 Rating</div>
+                        <div class="text-primary-600 text-xs">500+ Reviews</div>
+                    </div>
+                </div>
+                
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all transform hover:scale-105">
+                    Get Free Estimate
+                </button>
+            </div>
+            
+            <!-- Mobile Reviews Bar -->
+            <div class="lg:hidden border-t border-neutral-100 py-3">
+                <div class="flex items-center justify-center bg-primary-50 rounded-lg py-2 mx-4">
+                    <div class="star-rating text-lg mr-2">★★★★★</div>
+                    <div class="text-sm text-center">
+                        <span class="font-semibold text-primary-700">4.9/5 Rating</span>
+                        <span class="text-primary-600 ml-2">from 500+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero Section -->
+    <section class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-black text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Get In <span class="text-primary-400">Touch</span>
+            </h2>
+            <p class="text-xl text-neutral-300 max-w-3xl mx-auto">
+                Ready to restore your vehicle to perfection? Contact us today for your free estimate
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-3xl font-bold text-neutral-800 mb-8">Request Your Free Estimate</h3>
+                    
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">First Name *</label>
+                                <input type="text" required 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">Last Name *</label>
+                                <input type="text" required 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">Phone Number *</label>
+                                <input type="tel" required 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">Email Address *</label>
+                                <input type="email" required 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">Vehicle Year</label>
+                                <input type="text" placeholder="e.g., 2020" 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-neutral-700 mb-2">Vehicle Make & Model</label>
+                                <input type="text" placeholder="e.g., Honda Accord" 
+                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-700 mb-2">Type of Service Needed</label>
+                            <select class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                                <option value="">Select a service</option>
+                                <option value="collision-repair">Collision Repair</option>
+                                <option value="paint-refinish">Paint & Refinishing</option>
+                                <option value="dent-repair">Dent Repair</option>
+                                <option value="frame-straightening">Frame Straightening</option>
+                                <option value="insurance-claim">Insurance Claim</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-700 mb-2">Describe the Damage *</label>
+                            <textarea rows="4" required placeholder="Please describe what happened and the extent of damage..."
+                                      class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-700 mb-2">Insurance Company (if applicable)</label>
+                            <input type="text" placeholder="e.g., State Farm, Allstate, Progressive" 
+                                   class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                        </div>
+
+                        <div class="bg-primary-50 border border-primary-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" id="consent" class="text-primary-600 rounded">
+                                <label for="consent" class="text-sm text-neutral-700">
+                                    I agree to receive communications about my estimate and repair services
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105">
+                            Submit Request for Free Estimate
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-3xl font-bold text-neutral-800 mb-8">Get In Touch Today</h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Phone -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">📞</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Call Us Now</h4>
+                                <p class="text-2xl font-bold text-primary-600 mb-2">(555) 123-4567</p>
+                                <p class="text-neutral-600">Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</p>
+                                <p class="text-primary-600 font-medium">24/7 Emergency Service Available</p>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">📍</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Visit Our Shop</h4>
+                                <p class="text-neutral-600 mb-2">
+                                    123 Auto Repair Lane<br>
+                                    Your City, ST 12345
+                                </p>
+                                <a href="location.html" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    Get Directions →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">✉️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Email Us</h4>
+                                <p class="text-neutral-600">info@autohausrepair.com</p>
+                                <p class="text-neutral-600">estimates@autohausrepair.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Emergency -->
+                        <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+                            <div class="flex items-start space-x-4">
+                                <span class="text-red-600 text-3xl">🚨</span>
+                                <div>
+                                    <h4 class="font-semibold text-red-800 text-lg mb-2">Emergency Service</h4>
+                                    <p class="text-red-700 mb-2">
+                                        Vehicle accident or breakdown? We offer 24/7 emergency towing and assistance.
+                                    </p>
+                                    <p class="text-red-800 font-semibold">Call (555) 123-4567 anytime</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Us Section -->
+    <section class="py-16 bg-neutral-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Why Choose Autohaus?</h3>
+                <p class="text-xl text-neutral-600">
+                    When you contact us, you get more than just a repair shop
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">⚡</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Fast Response</h4>
+                    <p class="text-neutral-600 text-sm">Quick estimates and prompt service to get you back on the road</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">💰</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Free Estimates</h4>
+                    <p class="text-neutral-600 text-sm">No-obligation estimates with transparent pricing</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🛡️</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Insurance Help</h4>
+                    <p class="text-neutral-600 text-sm">We handle insurance claims and direct billing</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">⭐</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Lifetime Warranty</h4>
+                    <p class="text-neutral-600 text-sm">Confidence-backed repairs with lifetime guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Frequently Asked Questions</h3>
+                <p class="text-xl text-neutral-600">
+                    Quick answers to common questions about our services
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-neutral-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-neutral-800 text-lg mb-3">How long does a typical repair take?</h4>
+                    <p class="text-neutral-600">Most collision repairs take 3-7 business days, depending on the extent of damage and parts availability. We'll provide a timeline with your estimate.</p>
+                </div>
+                
+                <div class="bg-neutral-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-neutral-800 text-lg mb-3">Do you work with all insurance companies?</h4>
+                    <p class="text-neutral-600">Yes! We work with all major insurance companies and can handle direct billing to make the process easier for you.</p>
+                </div>
+                
+                <div class="bg-neutral-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-neutral-800 text-lg mb-3">Do you offer rental car assistance?</h4>
+                    <p class="text-neutral-600">We coordinate with rental car companies and can help arrange transportation while your vehicle is being repaired.</p>
+                </div>
+                
+                <div class="bg-neutral-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-neutral-800 text-lg mb-3">What does your warranty cover?</h4>
+                    <p class="text-neutral-600">We provide a lifetime warranty on workmanship and paint, ensuring your repair meets our high standards for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <section class="py-8 bg-red-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-2">🚨 Need Emergency Service?</h3>
+            <p class="text-lg mb-4">Available 24/7 for accidents, breakdowns, and emergency towing</p>
+            <button class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-neutral-100 transition-colors">
+                Call Now: (555) 123-4567
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <div class="font-brand text-2xl font-black text-white mb-2">AUTOHAUS</div>
+                <div class="text-primary-400 text-sm tracking-widest mb-4">COLLISION CENTER INC.</div>
+                
+                <!-- Footer Reviews Summary -->
+                <div class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex">
+                    <div class="star-rating text-lg mr-3">★★★★★</div>
+                    <div class="text-sm">
+                        <span class="text-white font-semibold">Trusted by 500+ customers</span>
+                        <span class="text-neutral-400 ml-2">• 4.9/5 rating</span>
+                    </div>
+                </div>
+                
+                <p class="text-sm">Professional auto body repair and collision services since 1998</p>
+                <p class="text-xs mt-4">© 2024 Autohaus Collision Center Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

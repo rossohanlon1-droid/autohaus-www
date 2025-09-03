@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location & Hours - Autohaus Collision Center Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
+                        }
+                    },
+                    fontFamily: {
+                        'brand': ['Arial Black', 'Helvetica Black', 'Arial Bold', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+    <!-- Top Contact Bar -->
+    <div class="bg-primary-600 text-white py-2">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span>📞 (555) 123-4567</span>
+                <span>🕒 Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span>Free Estimates</span>
+                <span class="bg-white text-primary-600 px-2 py-1 rounded text-xs font-bold">CALL NOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Header -->
+    <header class="bg-black text-white py-4">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="font-brand text-4xl md:text-5xl font-black tracking-wider">
+                AUTOHAUS
+            </h1>
+            <p class="text-primary-400 text-sm tracking-widest mt-1 font-bold">
+                COLLISION CENTER INC.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation with Integrated Reviews Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Services</a>
+                    <a href="about.html" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">About</a>
+                    <a href="#gallery" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- Integrated Reviews Trust Badge -->
+                <div class="hidden lg:flex items-center bg-primary-50 border border-primary-200 rounded-full px-4 py-2 mr-4">
+                    <div class="star-rating text-lg mr-2">★★★★★</div>
+                    <div class="text-sm">
+                        <div class="font-semibold text-primary-700">4.9/5 Rating</div>
+                        <div class="text-primary-600 text-xs">500+ Reviews</div>
+                    </div>
+                </div>
+                
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all transform hover:scale-105">
+                    Get Free Estimate
+                </button>
+            </div>
+            
+            <!-- Mobile Reviews Bar -->
+            <div class="lg:hidden border-t border-neutral-100 py-3">
+                <div class="flex items-center justify-center bg-primary-50 rounded-lg py-2 mx-4">
+                    <div class="star-rating text-lg mr-2">★★★★★</div>
+                    <div class="text-sm text-center">
+                        <span class="font-semibold text-primary-700">4.9/5 Rating</span>
+                        <span class="text-primary-600 ml-2">from 500+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero Section -->
+    <section class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-black text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Visit <span class="text-primary-400">Our Shop</span>
+            </h2>
+            <p class="text-xl text-neutral-300 max-w-3xl mx-auto">
+                Conveniently located with easy access, ample parking, and a comfortable customer waiting area
+            </p>
+        </div>
+    </section>
+
+    <!-- Location Info Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-3xl font-bold text-neutral-800 mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">📍</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Address</h4>
+                                <p class="text-neutral-600">
+                                    123 Auto Repair Lane<br>
+                                    Your City, ST 12345
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">📞</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Phone</h4>
+                                <p class="text-neutral-600">(555) 123-4567</p>
+                                <p class="text-primary-600 font-medium">Available 24/7 for emergencies</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-50 p-3 rounded-lg">
+                                <span class="text-primary-600 text-2xl">✉️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-800 text-lg mb-1">Email</h4>
+                                <p class="text-neutral-600">info@autohausrepair.com</p>
+                                <p class="text-neutral-600">estimates@autohausrepair.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hours & Directions -->
+                <div>
+                    <h3 class="text-3xl font-bold text-neutral-800 mb-8">Hours & Directions</h3>
+                    
+                    <!-- Hours -->
+                    <div class="bg-neutral-50 p-6 rounded-xl mb-8">
+                        <h4 class="font-semibold text-neutral-800 text-lg mb-4 flex items-center">
+                            <span class="text-primary-600 text-xl mr-2">🕒</span>
+                            Business Hours
+                        </h4>
+                        <div class="space-y-2 text-neutral-600">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span class="font-medium">7:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday</span>
+                                <span class="font-medium">8:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span class="font-medium">Emergency Only</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-primary-600 mt-4 font-medium">
+                            📞 24/7 Emergency Towing Available
+                        </p>
+                    </div>
+
+                    <!-- Directions -->
+                    <div class="bg-primary-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-neutral-800 text-lg mb-4 flex items-center">
+                            <span class="text-primary-600 text-xl mr-2">🚗</span>
+                            Easy to Find
+                        </h4>
+                        <ul class="space-y-2 text-neutral-600">
+                            <li>• Located on Auto Repair Lane, just off Highway 101</li>
+                            <li>• Large parking lot with easy drop-off access</li>
+                            <li>• Wheelchair accessible entrance</li>
+                            <li>• Comfortable waiting area with WiFi</li>
+                            <li>• Rental car coordination available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-neutral-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Find Us on the Map</h3>
+                <p class="text-xl text-neutral-600">
+                    Convenient location with easy highway access and ample parking
+                </p>
+            </div>
+            
+            <!-- Map Placeholder -->
+            <div class="bg-neutral-200 rounded-xl overflow-hidden shadow-lg" style="height: 400px;">
+                <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-neutral-300 to-neutral-400">
+                    <div class="text-center text-neutral-600">
+                        <div class="text-6xl mb-4">🗺️</div>
+                        <h4 class="text-xl font-semibold mb-2">Interactive Map</h4>
+                        <p>123 Auto Repair Lane, Your City, ST 12345</p>
+                        <button class="mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                            Get Directions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">State-of-the-Art Facility</h3>
+                <p class="text-xl text-neutral-600">
+                    Modern equipment and comfortable amenities for the best service experience
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🔧</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Modern Equipment</h4>
+                    <p class="text-neutral-600 text-sm">Computerized frame machines, paint booths, and diagnostic tools</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">☕</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Comfortable Waiting Area</h4>
+                    <p class="text-neutral-600 text-sm">Free WiFi, coffee, and magazines while you wait</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🚗</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Ample Parking</h4>
+                    <p class="text-neutral-600 text-sm">Large lot with easy drop-off and pickup access</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">♿</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Accessibility</h4>
+                    <p class="text-neutral-600 text-sm">Wheelchair accessible with convenient entrance</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🚛</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Towing Services</h4>
+                    <p class="text-neutral-600 text-sm">24/7 emergency towing and transport coordination</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🔒</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Secure Storage</h4>
+                    <p class="text-neutral-600 text-sm">Monitored facility with secure vehicle storage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-16 bg-neutral-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Service Area</h3>
+                <p class="text-xl text-neutral-600">
+                    Proudly serving customers throughout the greater metro area
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <h4 class="font-semibold text-neutral-800 mb-2">Downtown</h4>
+                    <p class="text-neutral-600 text-sm">15 minutes from downtown core</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <h4 class="font-semibold text-neutral-800 mb-2">Northside</h4>
+                    <p class="text-neutral-600 text-sm">Convenient to northern suburbs</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <h4 class="font-semibold text-neutral-800 mb-2">Westside</h4>
+                    <p class="text-neutral-600 text-sm">Easy access from western areas</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <h4 class="font-semibold text-neutral-800 mb-2">Airport Area</h4>
+                    <p class="text-neutral-600 text-sm">Close to airport and business district</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">Ready to Visit Our Shop?</h3>
+            <p class="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+                Stop by anytime during business hours for a free estimate, or call ahead to schedule an appointment
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                    Get Directions
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    Call (555) 123-4567
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <div class="font-brand text-2xl font-black text-white mb-2">AUTOHAUS</div>
+                <div class="text-primary-400 text-sm tracking-widest mb-4">COLLISION CENTER INC.</div>
+                
+                <!-- Footer Reviews Summary -->
+                <div class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex">
+                    <div class="star-rating text-lg mr-3">★★★★★</div>
+                    <div class="text-sm">
+                        <span class="text-white font-semibold">Trusted by 500+ customers</span>
+                        <span class="text-neutral-400 ml-2">• 4.9/5 rating</span>
+                    </div>
+                </div>
+                
+                <p class="text-sm">Professional auto body repair and collision services since 1998</p>
+                <p class="text-xs mt-4">© 2024 Autohaus Collision Center Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
