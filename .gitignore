@@ -33,3 +33,6 @@ npm-debug.log*
 .env
 .env.local
 .env.*.local
+
+# Documentation and change request files
+docs/
