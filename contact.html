@@ -27,32 +27,56 @@ title: "Contact Us - Autohaus Collision Center Inc."
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
-                <div>
+                <div id="estimate-form">
                     <h3 class="text-3xl font-bold text-neutral-800 mb-8">Request Your Free Estimate</h3>
-                    
-                    <form class="space-y-6">
+
+                    <!-- Success Message -->
+                    <div id="success-message" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-600 text-2xl">✅</span>
+                            <div>
+                                <h4 class="font-semibold text-green-800 text-lg mb-2">Thank You for Your Request!</h4>
+                                <p class="text-green-700">
+                                    We've received your estimate request and will contact you within 24 hours.
+                                    Check your email for a confirmation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="3e63d852-87c1-4daa-a333-a78603299462">
+
+                        <!-- Hidden fields for better email formatting -->
+                        <input type="hidden" name="subject" value="🚗 New Estimate Request from Autohaus Website">
+                        <input type="hidden" name="from_name" value="Autohaus Contact Form">
+
+                        <!-- Redirect after successful submission - works on both localhost and production -->
+                        <input type="hidden" name="redirect" value="/contact.html?success=true">
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">First Name *</label>
-                                <input type="text" required 
+                                <input type="text" name="first_name" required
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">Last Name *</label>
-                                <input type="text" required 
+                                <input type="text" name="last_name" required
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                         </div>
-                        
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">Phone Number *</label>
-                                <input type="tel" required 
+                                <input type="tel" name="phone" required
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">Email Address *</label>
-                                <input type="email" required 
+                                <input type="email" name="email" required
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                         </div>
@@ -60,53 +84,57 @@ title: "Contact Us - Autohaus Collision Center Inc."
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">Vehicle Year</label>
-                                <input type="text" placeholder="e.g., 2020" 
+                                <input type="text" name="vehicle_year" placeholder="e.g., 2020"
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-neutral-700 mb-2">Vehicle Make & Model</label>
-                                <input type="text" placeholder="e.g., Honda Accord" 
+                                <input type="text" name="vehicle_make_model" placeholder="e.g., Honda Accord"
                                        class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-sm font-semibold text-neutral-700 mb-2">Type of Service Needed</label>
-                            <select class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
+                            <select name="service_type" class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                                 <option value="">Select a service</option>
-                                <option value="collision-repair">Collision Repair</option>
-                                <option value="paint-refinish">Paint & Refinishing</option>
-                                <option value="dent-repair">Dent Repair</option>
-                                <option value="frame-straightening">Frame Straightening</option>
-                                <option value="insurance-claim">Insurance Claim</option>
-                                <option value="other">Other</option>
+                                <option value="Collision Repair">Collision Repair</option>
+                                <option value="Paint & Refinishing">Paint & Refinishing</option>
+                                <option value="Dent Repair">Dent Repair</option>
+                                <option value="Frame Straightening">Frame Straightening</option>
+                                <option value="Insurance Claim">Insurance Claim</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div>
                             <label class="block text-sm font-semibold text-neutral-700 mb-2">Describe the Damage *</label>
-                            <textarea rows="4" required placeholder="Please describe what happened and the extent of damage..."
+                            <textarea rows="4" name="damage_description" required placeholder="Please describe what happened and the extent of damage..."
                                       class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"></textarea>
                         </div>
 
                         <div>
                             <label class="block text-sm font-semibold text-neutral-700 mb-2">Insurance Company (if applicable)</label>
-                            <input type="text" placeholder="e.g., State Farm, Allstate, Progressive" 
+                            <input type="text" name="insurance_company" placeholder="e.g., State Farm, Allstate, Progressive"
                                    class="w-full p-4 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors">
                         </div>
 
                         <div class="bg-primary-50 border border-primary-200 rounded-lg p-4">
                             <div class="flex items-center space-x-3">
-                                <input type="checkbox" id="consent" class="text-primary-600 rounded">
+                                <input type="checkbox" name="consent" id="consent" value="yes" class="text-primary-600 rounded">
                                 <label for="consent" class="text-sm text-neutral-700">
                                     I agree to receive communications about my estimate and repair services
                                 </label>
                             </div>
                         </div>
 
-                        <button type="submit" 
+                        <!-- Honeypot for spam protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" id="submit-btn"
                                 class="w-full bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105">
-                            Submit Request for Free Estimate
+                            <span id="submit-text">Submit Request for Free Estimate</span>
+                            <span id="submit-loading" class="hidden">Sending... ⏳</span>
                         </button>
                     </form>
                 </div>
@@ -123,9 +151,8 @@ title: "Contact Us - Autohaus Collision Center Inc."
                             </div>
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Call Us Now</h4>
-                                <p class="text-2xl font-bold text-primary-600 mb-2">(555) 123-4567</p>
-                                <p class="text-neutral-600">Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</p>
-                                <p class="text-primary-600 font-medium">24/7 Emergency Service Available</p>
+                                <p class="text-2xl font-bold text-primary-600 mb-2">{{ site.business.phone }}</p>
+                                <p class="text-neutral-600">{{ site.business.hours.weekday }}</p>
                             </div>
                         </div>
 
@@ -137,10 +164,10 @@ title: "Contact Us - Autohaus Collision Center Inc."
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Visit Our Shop</h4>
                                 <p class="text-neutral-600 mb-2">
-                                    123 Auto Repair Lane<br>
-                                    Your City, ST 12345
+                                    {{ site.business.address.street }}<br>
+                                    {{ site.business.address.city }}, {{ site.business.address.state }} {{ site.business.address.zip }}
                                 </p>
-                                <a href="location.html" class="text-primary-600 hover:text-primary-700 font-medium">
+                                <a href="{{ site.business.google_maps_url }}" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 font-medium">
                                     Get Directions →
                                 </a>
                             </div>
@@ -153,22 +180,7 @@ title: "Contact Us - Autohaus Collision Center Inc."
                             </div>
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Email Us</h4>
-                                <p class="text-neutral-600">info@autohausrepair.com</p>
-                                <p class="text-neutral-600">estimates@autohausrepair.com</p>
-                            </div>
-                        </div>
-
-                        <!-- Emergency -->
-                        <div class="bg-red-50 border border-red-200 rounded-xl p-6">
-                            <div class="flex items-start space-x-4">
-                                <span class="text-red-600 text-3xl">🚨</span>
-                                <div>
-                                    <h4 class="font-semibold text-red-800 text-lg mb-2">Emergency Service</h4>
-                                    <p class="text-red-700 mb-2">
-                                        Vehicle accident or breakdown? We offer 24/7 emergency towing and assistance.
-                                    </p>
-                                    <p class="text-red-800 font-semibold">Call (555) 123-4567 anytime</p>
-                                </div>
+                                <p class="text-neutral-600">{{ site.business.email }}</p>
                             </div>
                         </div>
                     </div>
@@ -257,17 +269,54 @@ title: "Contact Us - Autohaus Collision Center Inc."
         </div>
     </section>
 
-    <!-- Emergency Banner -->
-    <section class="py-8 bg-red-600 text-white">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold mb-2">🚨 Need Emergency Service?</h3>
-            <p class="text-lg mb-4">Available 24/7 for accidents, breakdowns, and emergency towing</p>
-            <button class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-neutral-100 transition-colors">
-                Call Now: (555) 123-4567
-            </button>
-        </div>
-    </section>
-
     {% include footer.html %}
+
+    <!-- Form Handling Scripts -->
+    <script>
+        // Show loading state when form is submitted
+        const form = document.querySelector('form');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const submitLoading = document.getElementById('submit-loading');
+
+        if (form) {
+            form.addEventListener('submit', function() {
+                // Show loading state
+                submitBtn.disabled = true;
+                submitText.classList.add('hidden');
+                submitLoading.classList.remove('hidden');
+            });
+        }
+
+        // Show success message if redirected with success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const successMessage = document.getElementById('success-message');
+            if (successMessage) {
+                successMessage.classList.remove('hidden');
+                // Scroll to the message smoothly
+                setTimeout(() => {
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+                // Remove the success parameter from URL without page reload
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+
+        // Focus on form when linked from "Get Free Estimate" buttons
+        if (window.location.hash === '#estimate-form') {
+            const estimateForm = document.getElementById('estimate-form');
+            if (estimateForm) {
+                setTimeout(() => {
+                    estimateForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Focus on the first input field
+                    const firstInput = estimateForm.querySelector('input[name="first_name"]');
+                    if (firstInput) {
+                        setTimeout(() => firstInput.focus(), 500);
+                    }
+                }, 100);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -38,8 +38,8 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Address</h4>
                                 <p class="text-neutral-600">
-                                    123 Auto Repair Lane<br>
-                                    Your City, ST 12345
+                                    {{ site.business.address.street }}<br>
+                                    {{ site.business.address.city }}, {{ site.business.address.state }} {{ site.business.address.zip }}
                                 </p>
                             </div>
                         </div>
@@ -50,8 +50,7 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                             </div>
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Phone</h4>
-                                <p class="text-neutral-600">(555) 123-4567</p>
-                                <p class="text-primary-600 font-medium">Available 24/7 for emergencies</p>
+                                <p class="text-neutral-600">{{ site.business.phone }}</p>
                             </div>
                         </div>
 
@@ -61,8 +60,7 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                             </div>
                             <div>
                                 <h4 class="font-semibold text-neutral-800 text-lg mb-1">Email</h4>
-                                <p class="text-neutral-600">info@autohausrepair.com</p>
-                                <p class="text-neutral-600">estimates@autohausrepair.com</p>
+                                <p class="text-neutral-600">{{ site.business.email }}</p>
                             </div>
                         </div>
                     </div>
@@ -81,35 +79,13 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                         <div class="space-y-2 text-neutral-600">
                             <div class="flex justify-between">
                                 <span>Monday - Friday</span>
-                                <span class="font-medium">7:00 AM - 6:00 PM</span>
+                                <span class="font-medium">{{ site.business.hours.weekday }}</span>
                             </div>
                             <div class="flex justify-between">
-                                <span>Saturday</span>
-                                <span class="font-medium">8:00 AM - 4:00 PM</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>Sunday</span>
-                                <span class="font-medium">Emergency Only</span>
+                                <span>Saturday - Sunday</span>
+                                <span class="font-medium">{{ site.business.hours.weekend }}</span>
                             </div>
                         </div>
-                        <p class="text-sm text-primary-600 mt-4 font-medium">
-                            📞 24/7 Emergency Towing Available
-                        </p>
-                    </div>
-
-                    <!-- Directions -->
-                    <div class="bg-primary-50 p-6 rounded-xl">
-                        <h4 class="font-semibold text-neutral-800 text-lg mb-4 flex items-center">
-                            <span class="text-primary-600 text-xl mr-2">🚗</span>
-                            Easy to Find
-                        </h4>
-                        <ul class="space-y-2 text-neutral-600">
-                            <li>• Located on Auto Repair Lane, just off Highway 101</li>
-                            <li>• Large parking lot with easy drop-off access</li>
-                            <li>• Wheelchair accessible entrance</li>
-                            <li>• Comfortable waiting area with WiFi</li>
-                            <li>• Rental car coordination available</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -126,18 +102,17 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                 </p>
             </div>
             
-            <!-- Map Placeholder -->
-            <div class="bg-neutral-200 rounded-xl overflow-hidden shadow-lg" style="height: 400px;">
-                <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-neutral-300 to-neutral-400">
-                    <div class="text-center text-neutral-600">
-                        <div class="text-6xl mb-4">🗺️</div>
-                        <h4 class="text-xl font-semibold mb-2">Interactive Map</h4>
-                        <p>123 Auto Repair Lane, Your City, ST 12345</p>
-                        <button class="mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
-                            Get Directions
-                        </button>
-                    </div>
-                </div>
+            <!-- Google Map -->
+            <div class="rounded-xl overflow-hidden shadow-lg" style="height: 450px;">
+                <iframe
+                    width="100%"
+                    height="100%"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.7662837684547!2d-74.11892!3d41.11636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ea1e8c8c8c8d%3A0x1234567890abcdef!2s12%20Wayne%20Ave%2C%20Suffern%2C%20NY%2010901!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus">
+                </iframe>
             </div>
         </div>
     </section>
@@ -190,7 +165,7 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                         <span class="text-3xl">🚛</span>
                     </div>
                     <h4 class="font-semibold text-neutral-800 mb-2">Towing Services</h4>
-                    <p class="text-neutral-600 text-sm">24/7 emergency towing and transport coordination</p>
+                    <p class="text-neutral-600 text-sm">Towing and transport coordination available</p>
                 </div>
                 
                 <div class="text-center">
@@ -204,37 +179,6 @@ title: "Location & Hours - Autohaus Collision Center Inc."
         </div>
     </section>
 
-    <!-- Service Area -->
-    <section class="py-16 bg-neutral-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Service Area</h3>
-                <p class="text-xl text-neutral-600">
-                    Proudly serving customers throughout the greater metro area
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h4 class="font-semibold text-neutral-800 mb-2">Downtown</h4>
-                    <p class="text-neutral-600 text-sm">15 minutes from downtown core</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h4 class="font-semibold text-neutral-800 mb-2">Northside</h4>
-                    <p class="text-neutral-600 text-sm">Convenient to northern suburbs</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h4 class="font-semibold text-neutral-800 mb-2">Westside</h4>
-                    <p class="text-neutral-600 text-sm">Easy access from western areas</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h4 class="font-semibold text-neutral-800 mb-2">Airport Area</h4>
-                    <p class="text-neutral-600 text-sm">Close to airport and business district</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Call to Action -->
     <section class="py-16 bg-black text-white">
         <div class="max-w-6xl mx-auto px-4 text-center">
@@ -243,12 +187,12 @@ title: "Location & Hours - Autohaus Collision Center Inc."
                 Stop by anytime during business hours for a free estimate, or call ahead to schedule an appointment
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                <a href="{{ site.business.google_maps_url }}" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
                     Get Directions
-                </button>
-                <button class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                    Call (555) 123-4567
-                </button>
+                </a>
+                <a href="{{ site.business.phone_link }}" class="inline-block border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all text-center">
+                    Call {{ site.business.phone }}
+                </a>
             </div>
         </div>
     </section>

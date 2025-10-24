@@ -20,12 +20,12 @@ layout: null
                 You have the right to choose quality collision repair—don't let your insurance decide for you
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                <a href="{{ site.business.phone_link }}" class="inline-block border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all text-center">
                     Call Now
-                </button>
-                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
-                    Email Now
-                </button>
+                </a>
+                <a href="contact.html#estimate-form" class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 text-center">
+                    Get Free Estimate
+                </a>
             </div>
         </div>
     </section>
@@ -75,17 +75,17 @@ layout: null
                 <div>
                     <h2 class="text-4xl font-bold text-neutral-800 mb-6">Why Choose Autohaus?</h2>
                     <p class="text-lg text-neutral-600 mb-6">
-                        With over 25 years in the auto body repair industry, we've built our reputation on 
+                        With over {{ site.business.years_experience }} years in the auto body repair industry, we've built our reputation on
                         quality craftsmanship, honest service, and customer satisfaction.
                     </p>
                     
                     <!-- Enhanced Customer Trust Indicators -->
-                    <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-6">
+                    <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="block bg-primary-50 border border-primary-200 rounded-xl p-6 mb-6 hover:bg-primary-100 transition-colors">
                         <div class="flex items-center mb-4">
                             <div class="star-rating text-2xl mr-3">★★★★★</div>
                             <div>
-                                <div class="text-xl font-bold text-primary-700">4.9 out of 5 stars</div>
-                                <div class="text-primary-600">Based on 500+ customer reviews</div>
+                                <div class="text-xl font-bold text-primary-700">{{ site.data.reviews.rating }} out of 5 stars</div>
+                                <div class="text-primary-600">Based on {{ site.data.reviews.total_reviews }}+ customer reviews</div>
                             </div>
                         </div>
                         <div class="grid grid-cols-3 gap-4 text-center">
@@ -94,7 +94,7 @@ layout: null
                                 <div class="text-sm text-primary-600">Would Recommend</div>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold text-primary-600">15+</div>
+                                <div class="text-2xl font-bold text-primary-600">25+</div>
                                 <div class="text-sm text-primary-600">Years Serving</div>
                             </div>
                             <div>
@@ -102,7 +102,7 @@ layout: null
                                 <div class="text-sm text-primary-600">Quality Repairs</div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     
                     <div class="space-y-4">
                         <div class="flex items-center space-x-3">
@@ -138,7 +138,7 @@ layout: null
                          class="rounded-xl shadow-xl w-full max-w-md ml-auto">
                     <div class="grid grid-cols-2 gap-4 mt-6 max-w-md ml-auto">
                         <div class="text-center bg-white p-4 rounded-lg shadow">
-                            <div class="text-2xl font-bold text-primary-600">25+</div>
+                            <div class="text-2xl font-bold text-primary-600">{{ site.business.years_experience }}</div>
                             <div class="text-sm text-neutral-600">Years Experience</div>
                         </div>
                         <div class="text-center bg-white p-4 rounded-lg shadow">
@@ -169,21 +169,21 @@ layout: null
                             <span class="text-primary-400">📞</span>
                             <div>
                                 <div class="font-medium">Phone</div>
-                                <div class="text-neutral-300">845-358-1770</div>
+                                <div class="text-neutral-300">{{ site.business.phone }}</div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-primary-400">📍</span>
                             <div>
                                 <div class="font-medium">Address</div>
-                                <div class="text-neutral-300">12 Wayne Ave<br>Suffern NY 10901</div>
+                                <div class="text-neutral-300">{{ site.business.address.street }}<br>{{ site.business.address.city }} {{ site.business.address.state }} {{ site.business.address.zip }}</div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-primary-400">🕒</span>
                             <div>
                                 <div class="font-medium">Hours</div>
-                                <div class="text-neutral-300">Mon-Fri: 8AM-5PM</div>
+                                <div class="text-neutral-300">{{ site.business.hours.weekday }}</div>
                             </div>
                         </div>
                     </div>
@@ -201,20 +201,47 @@ layout: null
                 
                 <div class="bg-neutral-800 p-8 rounded-xl">
                     <h3 class="text-2xl font-semibold mb-6 text-primary-400">Contact Us Now</h3>
-                    <form class="space-y-4">
+
+                    <!-- Success Message -->
+                    <div id="homepage-success-message" class="hidden bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-600 text-xl">✅</span>
+                            <div>
+                                <h4 class="font-semibold text-green-800 mb-1">Thank You!</h4>
+                                <p class="text-green-700 text-sm">We'll contact you within 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" id="homepage-form">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="3e63d852-87c1-4daa-a333-a78603299462">
+
+                        <!-- Hidden fields for better email formatting -->
+                        <input type="hidden" name="subject" value="🚗 Quick Contact from Autohaus Homepage">
+                        <input type="hidden" name="from_name" value="Autohaus Homepage Form">
+
+                        <!-- Redirect after successful submission -->
+                        <input type="hidden" name="redirect" value="/?success=true">
+
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Your Name" 
+                            <input type="text" name="name" placeholder="Your Name" required
                                    class="bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
-                            <input type="tel" placeholder="Phone Number" 
+                            <input type="tel" name="phone" placeholder="Phone Number" required
                                    class="bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
                         </div>
-                        <input type="email" placeholder="Email Address" 
+                        <input type="email" name="email" placeholder="Email Address" required
                                class="w-full bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none">
-                        <textarea placeholder="Describe the damage..." rows="4"
+                        <textarea name="message" placeholder="Describe the damage..." rows="4" required
                                   class="w-full bg-neutral-700 text-white p-3 rounded-lg focus:ring-2 focus:ring-primary-400 focus:outline-none"></textarea>
-                        <button type="submit" 
+
+                        <!-- Honeypot for spam protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" id="homepage-submit-btn"
                                 class="w-full bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-lg font-semibold transition-colors">
-                            Contact Us Now
+                            <span id="homepage-submit-text">Contact Us Now</span>
+                            <span id="homepage-submit-loading" class="hidden">Sending... ⏳</span>
                         </button>
                     </form>
                 </div>
@@ -223,5 +250,38 @@ layout: null
     </section>
 
     {% include footer.html %}
+
+    <!-- Homepage Form Handling Scripts -->
+    <script>
+        // Show loading state when homepage form is submitted
+        const homepageForm = document.getElementById('homepage-form');
+        const homepageSubmitBtn = document.getElementById('homepage-submit-btn');
+        const homepageSubmitText = document.getElementById('homepage-submit-text');
+        const homepageSubmitLoading = document.getElementById('homepage-submit-loading');
+
+        if (homepageForm) {
+            homepageForm.addEventListener('submit', function() {
+                // Show loading state
+                homepageSubmitBtn.disabled = true;
+                homepageSubmitText.classList.add('hidden');
+                homepageSubmitLoading.classList.remove('hidden');
+            });
+        }
+
+        // Show success message if redirected with success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const successMessage = document.getElementById('homepage-success-message');
+            if (successMessage) {
+                successMessage.classList.remove('hidden');
+                // Scroll to the message smoothly
+                setTimeout(() => {
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+                // Remove the success parameter from URL without page reload
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+    </script>
 </body>
 </html>

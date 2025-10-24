@@ -1,20 +1,20 @@
 <footer class="bg-neutral-900 text-neutral-300 py-8">
     <div class="max-w-6xl mx-auto px-4">
         <div class="text-center">
-            <div class="font-brand text-2xl font-black text-white mb-2">AUTOHAUS</div>
-            <div class="text-primary-400 text-sm tracking-widest mb-4">COLLISION CENTER INC.</div>
+            <div class="font-brand text-2xl font-black text-white mb-2">{{ site.business.name_short | upcase }}</div>
+            <div class="text-primary-400 text-sm tracking-widest mb-4">{{ site.business.tagline }}</div>
             
             <!-- Footer Reviews Summary -->
-            <div class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex">
+            <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex hover:bg-neutral-700 transition-colors">
                 <div class="star-rating text-lg mr-3">★★★★★</div>
                 <div class="text-sm">
-                    <span class="text-white font-semibold">Trusted by 500+ customers</span>
-                    <span class="text-neutral-400 ml-2">• 4.9/5 rating</span>
+                    <span class="text-white font-semibold">Trusted by {{ site.data.reviews.total_reviews }}+ customers</span>
+                    <span class="text-neutral-400 ml-2">• {{ site.data.reviews.rating }}/5 rating</span>
                 </div>
-            </div>
+            </a>
             
-            <p class="text-sm">Professional auto body repair and collision services since 1998</p>
-            <p class="text-xs mt-4">© 2024 Autohaus Collision Center Inc. All rights reserved.</p>
+            <p class="text-sm">Professional auto body repair and collision services since {{ site.business.founded_year }}</p>
+            <p class="text-xs mt-4">© 2024 {{ site.business.name }}. All rights reserved.</p>
         </div>
     </div>
 </footer>

@@ -14,10 +14,10 @@ title: "About Us - Autohaus Collision Center Inc."
     <section class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-black text-white py-16">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                About <span class="text-primary-400">Autohaus</span>
+                About <span class="text-primary-400">{{ site.business.name_short }}</span>
             </h2>
             <p class="text-xl text-neutral-300 max-w-3xl mx-auto">
-                Over 25 years of trusted automotive repair service. Family-owned, community-focused, and committed to excellence.
+                Over {{ site.business.years_experience }} years of trusted automotive repair service. Family-owned, community-focused, and committed to excellence.
             </p>
         </div>
     </section>
@@ -29,12 +29,12 @@ title: "About Us - Autohaus Collision Center Inc."
                 <div>
                     <h3 class="text-3xl font-bold text-neutral-800 mb-6">Our Story</h3>
                     <p class="text-lg text-neutral-600 mb-6">
-                        Founded in 1998, Autohaus Collision Center Inc. started as a small family business with a big dream: 
+                        Founded in {{ site.business.founded_year }}, {{ site.business.name }} started as a small family business with a big dream:
                         to provide honest, high-quality auto body repair services to our local community.
                     </p>
                     <p class="text-lg text-neutral-600 mb-6">
-                        Over the past 25+ years, we've grown from a two-bay operation to a state-of-the-art facility, 
-                        but our core values remain unchanged. We treat every vehicle as if it were our own and every 
+                        Over the past {{ site.business.years_experience }} years, we've grown from a two-bay operation to a state-of-the-art facility,
+                        but our core values remain unchanged. We treat every vehicle as if it were our own and every
                         customer like family.
                     </p>
                     <p class="text-lg text-neutral-600">
@@ -43,137 +43,9 @@ title: "About Us - Autohaus Collision Center Inc."
                     </p>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                         alt="Autohaus Shop Exterior" 
+                    <img src="assets/images/car_spray_exterior.png"
+                         alt="Autohaus Car Spray Painting"
                          class="rounded-xl shadow-xl w-full">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="py-16 bg-neutral-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Meet Our Expert Team</h3>
-                <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
-                    Our I-CAR certified technicians bring decades of combined experience to every repair
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-                         alt="Mike Rodriguez - Owner" 
-                         class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h4 class="text-xl font-semibold text-neutral-800 mb-2">Mike Rodriguez</h4>
-                    <p class="text-primary-600 font-medium mb-3">Owner & Master Technician</p>
-                    <p class="text-neutral-600 text-sm">25+ years experience, ASE Master Certified</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616c6e88dd4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-                         alt="Sarah Johnson - Manager" 
-                         class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h4 class="text-xl font-semibold text-neutral-800 mb-2">Sarah Johnson</h4>
-                    <p class="text-primary-600 font-medium mb-3">Shop Manager</p>
-                    <p class="text-neutral-600 text-sm">Insurance specialist, customer service expert</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-                         alt="Carlos Martinez - Paint Specialist" 
-                         class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h4 class="text-xl font-semibold text-neutral-800 mb-2">Carlos Martinez</h4>
-                    <p class="text-primary-600 font-medium mb-3">Paint & Refinish Specialist</p>
-                    <p class="text-neutral-600 text-sm">I-CAR certified, color matching expert</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications & Awards -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Certifications & Recognition</h3>
-                <p class="text-xl text-neutral-600">
-                    Industry-leading certifications and community recognition
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">🏆</span>
-                    </div>
-                    <h4 class="font-semibold text-neutral-800 mb-2">I-CAR Gold Class</h4>
-                    <p class="text-neutral-600 text-sm">Highest industry certification for collision repair excellence</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">✓</span>
-                    </div>
-                    <h4 class="font-semibold text-neutral-800 mb-2">ASE Certified</h4>
-                    <p class="text-neutral-600 text-sm">Automotive Service Excellence master technicians</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">🔧</span>
-                    </div>
-                    <h4 class="font-semibold text-neutral-800 mb-2">OEM Certified</h4>
-                    <p class="text-neutral-600 text-sm">Factory-approved repair procedures for all major brands</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">⭐</span>
-                    </div>
-                    <h4 class="font-semibold text-neutral-800 mb-2">Better Business Bureau A+</h4>
-                    <p class="text-neutral-600 text-sm">Highest rating for business integrity and customer service</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Involvement -->
-    <section class="py-16 bg-neutral-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                         alt="Community Event" 
-                         class="rounded-xl shadow-xl w-full">
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold text-neutral-800 mb-6">Community First</h3>
-                    <p class="text-lg text-neutral-600 mb-6">
-                        We believe in giving back to the community that has supported us for over 25 years. 
-                        That's why we're proud sponsors of local youth sports teams and regularly participate 
-                        in community safety events.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">Local high school sports sponsor</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">Annual car seat safety inspection events</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">Chamber of Commerce member since 2000</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -187,12 +59,58 @@ title: "About Us - Autohaus Collision Center Inc."
                 Join thousands of satisfied customers who trust us with their vehicle repairs
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105">
+                <a href="contact.html#estimate-form" class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 text-center">
                     Get Free Estimate
-                </button>
-                <button class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                    Call (555) 123-4567
-                </button>
+                </a>
+                <a href="{{ site.business.phone_link }}" class="inline-block border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transition-all text-center">
+                    Call {{ site.business.phone }}
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Awards -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-neutral-800 mb-4">Certifications & Recognition</h3>
+                <p class="text-xl text-neutral-600">
+                    Industry-leading certifications and community recognition
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🏆</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">I-CAR Gold Class</h4>
+                    <p class="text-neutral-600 text-sm">Highest industry certification for collision repair excellence</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">✓</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">ASE Certified</h4>
+                    <p class="text-neutral-600 text-sm">Automotive Service Excellence master technicians</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🔧</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">OEM Certified</h4>
+                    <p class="text-neutral-600 text-sm">Factory-approved repair procedures for all major brands</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-primary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">⭐</span>
+                    </div>
+                    <h4 class="font-semibold text-neutral-800 mb-2">Better Business Bureau A+</h4>
+                    <p class="text-neutral-600 text-sm">Highest rating for business integrity and customer service</p>
+                </div>
             </div>
         </div>
     </section>

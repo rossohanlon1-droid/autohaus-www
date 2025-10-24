@@ -1,6 +1,6 @@
 # Site settings
 title: autohaus collision
-email: info@autohauscollision.com
+email: autohaus_suffern@msn.com
 description: >- # this means to ignore newlines until "baseurl:"
   Professional auto body repair, collision restoration, and custom paint services. 
   Quality craftsmanship and exceptional customer service for over 20 years.
@@ -26,10 +26,38 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-# Business info
-phone: "(845) 368-1770"
-address: "12 Wayne Avenue, Suffern, New York 10901"
-hours: "Monday - Friday: 8AM - 5PM, Saturday: 9AM - 4PM"
+# Business Information
+business:
+  name: "Autohaus Collision Center Inc."
+  name_short: "Autohaus"
+  tagline: "COLLISION CENTER INC."
+
+  # Contact Information
+  phone: "845-358-1770"
+  phone_formatted: "(845) 358-1770"
+  phone_link: "tel:845-358-1770"
+  email: "autohaus_suffern@msn.com"
+
+  # Location
+  address:
+    street: "12 Wayne Ave"
+    city: "Suffern"
+    state: "NY"
+    zip: "10901"
+    full: "12 Wayne Ave, Suffern, NY 10901"
+
+  # Maps & Directions
+  google_maps_url: "https://www.google.com/maps/place/12+Wayne+Ave,+Suffern,+NY+10901"
+
+  # Business Hours
+  hours:
+    weekday: "Mon-Fri: 8AM-5PM"
+    weekend: "Closed"
+    emergency: "24/7 Emergency Service Available"
+
+  # Social Proof
+  years_experience: "25+"
+  founded_year: "1998"
 
 # Navigation
 header_pages:
