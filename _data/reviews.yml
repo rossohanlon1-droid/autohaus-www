@@ -1,0 +1,22 @@
+# Google Reviews Data for Autohaus Collision Center
+# This file is automatically updated by scripts/fetch_reviews.py
+# Last updated: 2025-10-23 (Manually updated with actual Google Business data)
+
+business_name: Autohaus Collision Center
+rating: 4.8
+total_reviews: 92
+google_url: https://www.google.com/maps/place/Autohaus+Collision+Center/@41.1175764,-74.1564157,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2e0938e9febd5:0x8e975e9d397b1962!8m2!3d41.1175724!4d-74.1538354!16s%2Fg%2F1xb2fhtj
+address: 12 Wayne Avenue, Suffern, New York 10901
+phone: (845) 368-1770
+
+rating_distribution:
+  5_star: 75
+  4_star: 13
+  3_star: 3
+  2_star: 1
+  1_star: 0
+
+recent_reviews: []
+
+last_updated: '2025-10-23 12:00:00'
+place_id: null
