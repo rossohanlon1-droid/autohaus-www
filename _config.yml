@@ -5,13 +5,22 @@ description: >- # this means to ignore newlines until "baseurl:"
   Professional auto body repair, collision restoration, and custom paint services. 
   Quality craftsmanship and exceptional customer service for over 20 years.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://autohauscollisioncenter.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-seo-tag
+
+# Permalink settings - removes .html extension
+permalink: pretty
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      permalink: /:basename/
 
 # Exclude from processing
 exclude:
