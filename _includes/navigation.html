@@ -29,10 +29,10 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <div class="flex items-center space-x-8">
-                <a href="/" class="text-primary-600 font-semibold">Home</a>
-                <a href="/about" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">About</a>
-                <a href="/location" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Location</a>
-                <a href="/contact" class="text-neutral-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+                <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Home</a>
+                <a href="/about" class="{% if page.url contains '/about' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">About</a>
+                <a href="/location" class="{% if page.url contains '/location' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Location</a>
+                <a href="/contact" class="{% if page.url contains '/contact' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Contact</a>
             </div>
             
             <!-- Integrated Reviews Trust Badge -->
