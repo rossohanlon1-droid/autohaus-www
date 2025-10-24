@@ -6,7 +6,10 @@
             
             <!-- Footer Reviews Summary -->
             <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center mb-4 bg-neutral-800 rounded-lg py-3 px-6 inline-flex hover:bg-neutral-700 transition-colors">
-                <div class="star-rating text-lg mr-3">★★★★★</div>
+                <div class="star-rating text-lg mr-3">
+                    <span class="star-rating-background">★★★★★</span>
+                    <span class="star-rating-fill" style="width: 96%;">★★★★★</span>
+                </div>
                 <div class="text-sm">
                     <span class="text-white font-semibold">Trusted by {{ site.data.reviews.total_reviews }}+ customers</span>
                     <span class="text-neutral-400 ml-2">• {{ site.data.reviews.rating }}/5 rating</span>

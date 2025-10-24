@@ -30,6 +30,22 @@
 </script>
 <style>
     .star-rating {
-        color: #fbbf24;
+        position: relative;
+        display: inline-flex;
+        font-size: inherit;
+        line-height: 1;
+    }
+
+    .star-rating-background {
+        color: #d1d5db; /* Gray for empty stars */
+    }
+
+    .star-rating-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        color: #fbbf24; /* Yellow for filled stars */
+        white-space: nowrap;
     }
 </style>

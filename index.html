@@ -82,7 +82,10 @@ layout: null
                     <!-- Enhanced Customer Trust Indicators -->
                     <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="block bg-primary-50 border border-primary-200 rounded-xl p-6 mb-6 hover:bg-primary-100 transition-colors">
                         <div class="flex items-center mb-4">
-                            <div class="star-rating text-2xl mr-3">★★★★★</div>
+                            <div class="star-rating text-2xl mr-3">
+                                <span class="star-rating-background">★★★★★</span>
+                                <span class="star-rating-fill" style="width: 96%;">★★★★★</span>
+                            </div>
                             <div>
                                 <div class="text-xl font-bold text-primary-700">{{ site.data.reviews.rating }} out of 5 stars</div>
                                 <div class="text-primary-600">Based on {{ site.data.reviews.total_reviews }}+ customer reviews</div>

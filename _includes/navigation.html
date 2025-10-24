@@ -37,7 +37,10 @@
             
             <!-- Integrated Reviews Trust Badge -->
             <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center bg-primary-50 border border-primary-200 rounded-full px-4 py-2 mr-4 hover:bg-primary-100 transition-colors cursor-pointer">
-                <div class="star-rating text-lg mr-2">★★★★★</div>
+                <div class="star-rating text-lg mr-2">
+                    <span class="star-rating-background">★★★★★</span>
+                    <span class="star-rating-fill" style="width: 96%;">★★★★★</span>
+                </div>
                 <div class="text-sm">
                     <div class="font-semibold text-primary-700">{{ site.data.reviews.rating }}/5 Rating</div>
                     <div class="text-primary-600 text-xs">{{ site.data.reviews.total_reviews }}+ Reviews</div>
@@ -49,7 +52,10 @@
         <!-- Mobile Reviews Bar -->
         <div class="lg:hidden border-t border-neutral-100 py-3">
             <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-primary-50 rounded-lg py-2 mx-4 hover:bg-primary-100 transition-colors">
-                <div class="star-rating text-lg mr-2">★★★★★</div>
+                <div class="star-rating text-lg mr-2">
+                    <span class="star-rating-background">★★★★★</span>
+                    <span class="star-rating-fill" style="width: 96%;">★★★★★</span>
+                </div>
                 <div class="text-sm text-center">
                     <span class="font-semibold text-primary-700">{{ site.data.reviews.rating }}/5 Rating</span>
                     <span class="text-primary-600 ml-2">from {{ site.data.reviews.total_reviews }}+ Reviews</span>
