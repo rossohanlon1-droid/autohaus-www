@@ -13,14 +13,8 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
-# Permalink settings - removes .html extension
+# Permalink settings - removes .html extension from posts
 permalink: pretty
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      permalink: /:basename/
 
 # Exclude from processing
 exclude:
