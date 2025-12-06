@@ -2,9 +2,19 @@
 <div class="bg-primary-600 text-white py-2">
     <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
         <div class="flex items-center space-x-6">
-            <a href="{{ site.business.phone_link }}" class="hover:text-primary-100 transition-colors font-medium">{{ site.business.phone }}</a>
+            <a href="{{ site.business.phone_link }}" class="hover:text-primary-100 transition-colors font-medium flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span>{{ site.business.phone }}</span>
+            </a>
             <span class="text-primary-100">|</span>
-            <span class="text-primary-100">{{ site.business.hours.weekday }}</span>
+            <span class="text-primary-100 flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>{{ site.business.hours.weekday }}</span>
+            </span>
         </div>
         <div class="hidden sm:flex items-center">
             <a href="{{ site.business.phone_link }}" class="bg-white text-primary-600 px-3 py-1 rounded text-xs font-bold hover:bg-primary-50 transition-colors">CALL NOW</a>
@@ -29,12 +39,20 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <div class="flex items-center space-x-8">
-                <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Home</a>
-                <a href="/about" class="{% if page.url contains '/about' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">About</a>
-                <a href="/location" class="{% if page.url contains '/location' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Location</a>
-                <a href="/contact" class="{% if page.url contains '/contact' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Contact</a>
+                <!-- Logo (hidden by default, shown on scroll) -->
+                <a href="/" id="sticky-logo" class="font-brand text-2xl font-black tracking-wider text-black hover:text-primary-600 transition-colors opacity-0 invisible">
+                    {{ site.business.name_short | upcase }}
+                </a>
+
+                <!-- Nav Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Home</a>
+                    <a href="/about" class="{% if page.url contains '/about' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">About</a>
+                    <a href="/location" class="{% if page.url contains '/location' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Location</a>
+                    <a href="/contact" class="{% if page.url contains '/contact' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Contact</a>
+                </div>
             </div>
-            
+
             <!-- Integrated Reviews Trust Badge -->
             <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center bg-primary-50 border border-primary-200 rounded-full px-4 py-2 mr-4 hover:bg-primary-100 transition-colors cursor-pointer">
                 <div class="star-rating text-lg mr-2">
@@ -46,7 +64,7 @@
                     <div class="text-primary-600 text-xs">{{ site.data.reviews.total_reviews }}+ Reviews</div>
                 </div>
             </a>
-            
+
         </div>
         
         <!-- Mobile Reviews Bar -->
@@ -64,3 +82,33 @@
         </div>
     </div>
 </nav>
+
+<script>
+// Show/hide sticky nav logo based on scroll position
+(function() {
+    const stickyLogo = document.getElementById('sticky-logo');
+    const brandHeader = document.querySelector('header.bg-black');
+
+    if (stickyLogo && brandHeader) {
+        function handleScroll() {
+            const headerBottom = brandHeader.offsetTop + brandHeader.offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > headerBottom) {
+                // Scrolled past header - show logo
+                stickyLogo.classList.remove('opacity-0', 'invisible');
+                stickyLogo.classList.add('opacity-100', 'visible');
+            } else {
+                // Header still visible - hide logo
+                stickyLogo.classList.remove('opacity-100', 'visible');
+                stickyLogo.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+        // Check initial state
+        handleScroll();
+    }
+})();
+</script>

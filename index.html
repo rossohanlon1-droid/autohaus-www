@@ -31,7 +31,7 @@ layout: null
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
+    <section id="services" class="py-16 bg-neutral-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-neutral-800 mb-4">Our Expert Services</h2>
@@ -67,16 +67,16 @@ layout: null
     <!-- About/Trust Section with Enhanced Reviews Integration -->
     <section id="about" class="py-16 bg-neutral-50">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h2 class="text-4xl font-bold text-neutral-800 mb-6">Why Choose Autohaus?</h2>
                     <p class="text-lg text-neutral-600 mb-6">
                         With over {{ site.business.years_experience }} years in the auto body repair industry, we've built our reputation on
                         quality craftsmanship, honest service, and customer satisfaction.
                     </p>
-                    
+
                     <!-- Enhanced Customer Trust Indicators -->
-                    <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="block bg-primary-50 border border-primary-200 rounded-xl p-6 mb-6 hover:bg-primary-100 transition-colors">
+                    <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="block bg-primary-50 border border-primary-200 rounded-xl p-6 hover:bg-primary-100 transition-colors">
                         <div class="flex items-center mb-4">
                             <div class="star-rating text-2xl mr-3">
                                 <span class="star-rating-background">★★★★★</span>
@@ -97,56 +97,63 @@ layout: null
                                 <div class="text-sm text-primary-600">Years Serving</div>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold text-primary-600">Thousands</div>
+                                <div class="text-2xl font-bold text-primary-600">1,000+</div>
                                 <div class="text-sm text-primary-600">Quality Repairs</div>
                             </div>
                         </div>
                     </a>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">Lifetime warranty on all repairs</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">I-CAR Gold Class certified technicians</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">Direct insurance billing</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-neutral-700 font-medium">State-of-the-art equipment & facilities</span>
-                        </div>
-                    </div>
                 </div>
-                
+
                 <div class="lg:text-right">
                     <img src="/assets/images/paint_spray_gun.png"
                          alt="Professional Auto Body Paint Spray Gun"
                          class="rounded-xl shadow-xl w-full max-w-md ml-auto">
-                    <div class="grid grid-cols-2 gap-4 mt-6 max-w-md ml-auto">
-                        <div class="text-center bg-white p-4 rounded-lg shadow">
-                            <div class="text-2xl font-bold text-primary-600">{{ site.business.years_experience }}</div>
-                            <div class="text-sm text-neutral-600">Years Experience</div>
-                        </div>
-                        <div class="text-center bg-white p-4 rounded-lg shadow">
-                            <div class="text-2xl font-bold text-primary-600">Thousands</div>
-                            <div class="text-sm text-neutral-600">Quality Repairs</div>
-                        </div>
-                    </div>
                 </div>
             </div>
+
+            <!-- Key Features in 2-Column Layout -->
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="flex items-center space-x-3">
+                    <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white text-sm">✓</span>
+                    </div>
+                    <span class="text-neutral-700 font-medium">Lifetime warranty on all repairs</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white text-sm">✓</span>
+                    </div>
+                    <span class="text-neutral-700 font-medium">I-CAR Gold Class certified technicians</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white text-sm">✓</span>
+                    </div>
+                    <span class="text-neutral-700 font-medium">Direct insurance billing</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white text-sm">✓</span>
+                    </div>
+                    <span class="text-neutral-700 font-medium">State-of-the-art equipment & facilities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-neutral-800 mb-6">Certified Collision Repair Facility</h2>
+            <div class="flex justify-center mb-4">
+                <img src="/assets/images/honda-acura-certified-collision-repair.jpg"
+                     alt="Honda and Acura Certified Collision Repair Facility"
+                     class="h-64 md:h-80 w-auto">
+            </div>
+            <p class="text-neutral-600 max-w-2xl mx-auto">
+                As a Honda and Acura certified collision repair facility, we meet the highest standards
+                for equipment, training, and repair processes to restore your vehicle to factory specifications.
+            </p>
         </div>
     </section>
 
@@ -161,43 +168,35 @@ layout: null
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-primary-400">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <span class="text-primary-400">📞</span>
-                            <div>
-                                <div class="font-medium">Phone</div>
-                                <div class="text-neutral-300">{{ site.business.phone }}</div>
+                <div class="flex justify-center lg:justify-start">
+                    <div class="max-w-sm">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary-400">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-primary-400">📞</span>
+                                <div>
+                                    <div class="font-medium">Phone</div>
+                                    <div class="text-neutral-300">{{ site.business.phone }}</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-primary-400">📍</span>
+                                <div>
+                                    <div class="font-medium">Address</div>
+                                    <div class="text-neutral-300">{{ site.business.address.street }}<br>{{ site.business.address.city }} {{ site.business.address.state }} {{ site.business.address.zip }}</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-primary-400">🕒</span>
+                                <div>
+                                    <div class="font-medium">Hours</div>
+                                    <div class="text-neutral-300">{{ site.business.hours.weekday }}</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-primary-400">📍</span>
-                            <div>
-                                <div class="font-medium">Address</div>
-                                <div class="text-neutral-300">{{ site.business.address.street }}<br>{{ site.business.address.city }} {{ site.business.address.state }} {{ site.business.address.zip }}</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-primary-400">🕒</span>
-                            <div>
-                                <div class="font-medium">Hours</div>
-                                <div class="text-neutral-300">{{ site.business.hours.weekday }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="text-xl font-semibold mb-4 text-primary-400">Why Choose Us?</h4>
-                        <ul class="space-y-2 text-neutral-300">
-                            <li>• Free damage assessments and estimates</li>
-                            <li>• Insurance claim specialists on staff</li>
-                            <li>• Rental car coordination available</li>
-                            <li>• Lifetime warranty on workmanship</li>
-                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="bg-neutral-800 p-8 rounded-xl">
                     <h3 class="text-2xl font-semibold mb-6 text-primary-400">Contact Us Now</h3>
 
@@ -245,22 +244,6 @@ layout: null
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="py-12 bg-white">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-neutral-800 mb-6">Certified Collision Repair Facility</h2>
-            <div class="flex justify-center mb-4">
-                <img src="/assets/images/honda-acura-certified-collision-repair.jpg"
-                     alt="Honda and Acura Certified Collision Repair Facility"
-                     class="h-64 md:h-80 w-auto">
-            </div>
-            <p class="text-neutral-600 max-w-2xl mx-auto">
-                As a Honda and Acura certified collision repair facility, we meet the highest standards
-                for equipment, training, and repair processes to restore your vehicle to factory specifications.
-            </p>
         </div>
     </section>
 
