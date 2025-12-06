@@ -26,7 +26,7 @@ git push -u origin main
 
 Before deploying, update `_config.yml`:
 ```yaml
-title: [Your Auto Body Shop Name]
+title: [autohaus collision]
 email: [your-email@domain.com]
 url: "https://yourusername.github.io/autohaus_www"
 phone: [your-phone-number]

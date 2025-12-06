@@ -1,13 +1,13 @@
 <!-- Top Contact Bar -->
 <div class="bg-primary-600 text-white py-2">
     <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
-        <div class="flex items-center space-x-4">
-            <span>📞 {{ site.business.phone }}</span>
-            <span>🕒 {{ site.business.hours.weekday }}</span>
+        <div class="flex items-center space-x-6">
+            <a href="{{ site.business.phone_link }}" class="hover:text-primary-100 transition-colors font-medium">{{ site.business.phone }}</a>
+            <span class="text-primary-100">|</span>
+            <span class="text-primary-100">{{ site.business.hours.weekday }}</span>
         </div>
-        <div class="hidden sm:flex items-center space-x-2">
-            <span></span>
-            <a href="{{ site.business.phone_link }}" class="bg-white text-primary-600 px-2 py-1 rounded text-xs font-bold hover:bg-gray-100 transition-colors">CALL NOW</a>
+        <div class="hidden sm:flex items-center">
+            <a href="{{ site.business.phone_link }}" class="bg-white text-primary-600 px-3 py-1 rounded text-xs font-bold hover:bg-primary-50 transition-colors">CALL NOW</a>
         </div>
     </div>
 </div>
