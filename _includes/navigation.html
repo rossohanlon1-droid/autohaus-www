@@ -38,14 +38,27 @@
 <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center py-4">
-            <div class="flex items-center space-x-8">
-                <!-- Logo (hidden by default, shown on scroll) -->
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-neutral-700 hover:text-primary-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Mobile Logo (centered, shown on scroll) -->
+            <a href="/" id="sticky-logo-mobile" class="md:hidden font-brand text-xl font-black tracking-wider text-black absolute left-1/2 transform -translate-x-1/2 opacity-0 invisible">
+                {{ site.business.name_short | upcase }}
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8">
+                <!-- Desktop Logo (shown on scroll) -->
                 <a href="/" id="sticky-logo" class="font-brand text-2xl font-black tracking-wider text-black hover:text-primary-600 transition-colors opacity-0 invisible">
                     {{ site.business.name_short | upcase }}
                 </a>
 
                 <!-- Nav Links -->
-                <div class="hidden md:flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
                     <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Home</a>
                     <a href="/about" class="{% if page.url contains '/about' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">About</a>
                     <a href="/location" class="{% if page.url contains '/location' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %}">Location</a>
@@ -53,7 +66,7 @@
                 </div>
             </div>
 
-            <!-- Integrated Reviews Trust Badge -->
+            <!-- Reviews Badge (Desktop only) -->
             <a href="{{ site.data.reviews.google_url }}" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center bg-primary-50 border border-primary-200 rounded-full px-4 py-2 mr-4 hover:bg-primary-100 transition-colors cursor-pointer">
                 <div class="star-rating text-lg mr-2">
                     <span class="star-rating-background">★★★★★</span>
@@ -65,6 +78,18 @@
                 </div>
             </a>
 
+            <!-- Spacer for mobile (to balance hamburger button) -->
+            <div class="md:hidden w-6"></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-100 py-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %} py-2">Home</a>
+                <a href="/about" class="{% if page.url contains '/about' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %} py-2">About</a>
+                <a href="/location" class="{% if page.url contains '/location' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %} py-2">Location</a>
+                <a href="/contact" class="{% if page.url contains '/contact' %}text-primary-600 font-semibold{% else %}text-neutral-700 hover:text-primary-600 font-medium transition-colors{% endif %} py-2">Contact</a>
+            </div>
         </div>
         
         <!-- Mobile Reviews Bar -->
@@ -84,24 +109,57 @@
 </nav>
 
 <script>
-// Show/hide sticky nav logo based on scroll position
+// Mobile menu toggle
 (function() {
-    const stickyLogo = document.getElementById('sticky-logo');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+})();
+
+// Show/hide sticky nav logos based on scroll position
+(function() {
+    const stickyLogoDesktop = document.getElementById('sticky-logo');
+    const stickyLogoMobile = document.getElementById('sticky-logo-mobile');
     const brandHeader = document.querySelector('header.bg-black');
 
-    if (stickyLogo && brandHeader) {
+    if (brandHeader && (stickyLogoDesktop || stickyLogoMobile)) {
         function handleScroll() {
             const headerBottom = brandHeader.offsetTop + brandHeader.offsetHeight;
             const scrollPosition = window.scrollY;
 
             if (scrollPosition > headerBottom) {
-                // Scrolled past header - show logo
-                stickyLogo.classList.remove('opacity-0', 'invisible');
-                stickyLogo.classList.add('opacity-100', 'visible');
+                // Scrolled past header - show logos
+                if (stickyLogoDesktop) {
+                    stickyLogoDesktop.classList.remove('opacity-0', 'invisible');
+                    stickyLogoDesktop.classList.add('opacity-100', 'visible');
+                }
+                if (stickyLogoMobile) {
+                    stickyLogoMobile.classList.remove('opacity-0', 'invisible');
+                    stickyLogoMobile.classList.add('opacity-100', 'visible');
+                }
             } else {
-                // Header still visible - hide logo
-                stickyLogo.classList.remove('opacity-100', 'visible');
-                stickyLogo.classList.add('opacity-0', 'invisible');
+                // Header still visible - hide logos
+                if (stickyLogoDesktop) {
+                    stickyLogoDesktop.classList.remove('opacity-100', 'visible');
+                    stickyLogoDesktop.classList.add('opacity-0', 'invisible');
+                }
+                if (stickyLogoMobile) {
+                    stickyLogoMobile.classList.remove('opacity-100', 'visible');
+                    stickyLogoMobile.classList.add('opacity-0', 'invisible');
+                }
             }
         }
 
